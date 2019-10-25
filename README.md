@@ -2,7 +2,7 @@
 Created a python module to perform statistical calculations. See below for calculations that can be performed.
 
 ## **Program calculates the following:**
-- [] Population Mean
+- [Y] Population Mean
 - [] Median
 - [] Mode
 - [] Population Standard Deviation
