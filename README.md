@@ -20,7 +20,7 @@ See below for calculations that can be performed.
 - [ ] Sample Standard Deviation
 - [ ] Variance of sample proportion
 
-## **For definitions of some of the programming terms used please see link below for their definitions  :** [Additional terms(miniproject2)](https://github.com/rutvik2611/miniproject1/blob/master/Additional%20terms(miniproject2.md))
+**For definitions of some of the programming terms used please see link below for their definitions  :** [Additional terms(miniproject2)](https://github.com/rutvik2611/miniproject1/blob/master/Additional%20terms(miniproject2.md))
 
 
 ### Contributors
