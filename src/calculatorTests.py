@@ -9,19 +9,19 @@ class MyTestCase(unittest.TestCase):
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.calculator, calculator)
 
-    def test_addition(self):
+    def test_add(self):
         self.calculator.add(3, 3)
         self.assertEqual(self.calculator.result, 6)
 
-    def test_subtraction(self):
+    def test_sub(self):
         self.calculator.sub(3, 3)
         self.assertEqual(self.calculator.result, 0)
 
-    def test_multiplication(self):
+    def test_times(self):
         self.calculator.times(3, 3)
         self.assertEqual(self.calculator.result, 9)
 
-    def test_division(self):
+    def test_div(self):
         self.calculator.div(3, 3)
         self.assertEqual(self.calculator.result, 1)
 
@@ -29,7 +29,7 @@ class MyTestCase(unittest.TestCase):
         self.calculator.square(9)
         self.assertEqual(self.calculator.result, 81)
 
-    def test_squareRoot(self):
+    def test_sqrt(self):
         self.calculator.sqrt(81)
         self.assertEqual(self.calculator.result, 9)
 
