@@ -4,10 +4,10 @@ Created a python module to perform statistical calculations. For each calculatio
 See below for calculations that can be performed.
 
 ## **Program calculates the following:**
-- [ ] Population Mean
-- [ ] Median
-- [ ] Mode
-- [ ] Population Standard Deviation
+- [X] Population Mean
+- [X] Median
+- [X] Mode
+- [X] Population Standard Deviation
 - [ ] Variance of population proportion
 - [ ] Z-Score
 - [ ] Standardized score
