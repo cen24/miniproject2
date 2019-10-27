@@ -1,4 +1,5 @@
 import math
+import statistics
 
 def add(a, b):
     c = a + b
@@ -20,7 +21,7 @@ def square(a):
     c = a * a
     return c
 
-def squareRoot(a):
+def sqrt(a):
     math.sqrt(a)
     return c
 
