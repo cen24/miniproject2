@@ -1,6 +1,5 @@
 import math
 import statistics
-import _statistics
 
 def add(a, b):
     c = a + b
