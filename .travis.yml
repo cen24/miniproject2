@@ -6,7 +6,7 @@ python:
 services: docker
 
 install:
-  - pip install unittest
+  - pip install unittest2
 
 script :
   - python ./src/calculatorTests.py
