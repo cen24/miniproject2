@@ -1,4 +1,5 @@
 import unittest
+import csv
 from calculator import calculator
 
 
@@ -52,6 +53,21 @@ class MyTestCase(unittest.TestCase):
 
     def test_results_property(self):
         self.assertEqual(self.calculator.result, 0)
+
+    def test_read_csv_add(self):
+        with open('uadd.csv', 'r') as f:
+            next(f)
+            reader = csv.reader(f)
+            your_list = list(reader)
+
+            for var in range(len(your_list)):
+                a = int(your_list[var][0])
+                b = int(your_list[var][1])
+                c = int(your_list[var][2])
+
+                self.calculator.add(a, b)
+                self.assertEqual(self.calculator.result, c)
+
 
 
 if __name__ == '__main__':
