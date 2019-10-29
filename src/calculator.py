@@ -94,7 +94,7 @@ def sample_mean(list):
 class calculator:
     result = 0
     list = [1, 2, 3, 4, 5]
-    list2 = []
+    list_mode =[1, 2, 3, 4, 2]
 
   #  def listy(self):
    #  with open('uadd.csv', 'r') as f:

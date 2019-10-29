@@ -39,7 +39,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.result, 3)
 
     def test_mode(self):
-        self.calculator.mode_(list([1, 2, 3, 4, 2]))
+        self.calculator.mode_(self.calculator.list_mode)
         self.assertEqual(self.calculator.result, 2)
 
     def test_mean(self):
