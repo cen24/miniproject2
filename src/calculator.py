@@ -131,7 +131,7 @@ def pvalue(list):
 # Population Variance
 # P Value(Rutvik)-done
 # Proportion(Rutvik)
-# Sample Mean(Rutvik)
+# Sample Mean(Rutvik)-done
 # Sample Standard Deviation(Rutvik)
 # Variance of sample proportion
 
