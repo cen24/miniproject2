@@ -48,16 +48,18 @@ def zscore(z, list):
     c = (z - meanx) / stdevx
     return c
 
+
+
 # Variance of population proportion
-# Z-Score
+
 # Standardized score
 # Population Correlation Coefficient
 # Confidence Interval
 # Population Variance
-# P Value
-# Proportion
-# Sample Mean
-# Sample Standard Deviation
+# P Value(Rutvik)
+# Proportion(Rutvik)
+# Sample Mean(Rutvik)
+# Sample Standard Deviation(Rutvik)
 # Variance of sample proportion
 
 class calculator:
