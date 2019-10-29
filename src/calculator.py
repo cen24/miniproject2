@@ -72,6 +72,13 @@ def sample_mean(list):
     c = n2 / sqrt(len(list))
     return c
 
+def popvariance(list):
+    meanx = mean(list)
+    listx = list
+
+
+
+
 
 
 
