@@ -1,5 +1,6 @@
 import math
 import statistics
+import csv
 import stat
 
 def add(a, b):
@@ -76,6 +77,8 @@ def sample_mean(list):
 
 
 
+
+
 # Variance of population proportion
 
 # Standardized score
@@ -91,6 +94,23 @@ def sample_mean(list):
 class calculator:
     result = 0
     list = [1, 2, 3, 4, 5]
+    list2 = []
+
+  #  def listy(self):
+   #  with open('uadd.csv', 'r') as f:
+    #        next(f)
+     #       reader = csv.reader(f)
+      #      your_list = list(reader)
+       # for var in range(len(your_list)):
+        #    a[var] = int(your_list[var][0])
+         #   b[var] = int(your_list[var][1])
+          #  c[var] = int(your_list[var][2])
+#
+ #           self.list2 = a
+  #      return self.list2
+        
+
+
 
     def __init__(self):
         pass

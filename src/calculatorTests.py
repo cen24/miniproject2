@@ -57,6 +57,16 @@ class MyTestCase(unittest.TestCase):
     def test_results_property(self):
         self.assertEqual(self.calculator.result, 0)
 
+
+   #def test_read_csv(self):
+
+        #print(self.calculator.listy)
+        #x = []
+        #x = self.calculator.listy()
+        #print(x)
+        #self.assertEqual(self.calculator.result, 0)
+
+
     def test_read_csv_add(self):
         with open('uadd.csv', 'r') as f:
             next(f)
