@@ -35,7 +35,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.result, 9)
 
     def test_median(self):
-        self.calculator.median_(list([2, 1, 5, 3, 4]))
+        self.calculator.median_(self.calculator.list)
         self.assertEqual(self.calculator.result, 3)
 
     def test_mode(self):
@@ -43,15 +43,15 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.result, 2)
 
     def test_mean(self):
-        self.calculator.mean_(list([1, 2, 3, 4, 5]))
+        self.calculator.mean_(self.calculator.list)
         self.assertEqual(self.calculator.result, 3)
 
     def test_stdev(self):
-        self.calculator.stdev_(list([1, 2, 3, 4, 5]))
+        self.calculator.stdev_(self.calculator.list)
         self.assertEqual(self.calculator.result, 1.5811388300841898)
 
     def test_zscore(self):
-        self.calculator.zscore_(5, list([1, 2, 3, 4, 5]))
+        self.calculator.zscore_(5, self.calculator.list)
         self.assertEqual(self.calculator.result, 1.2649110640673518)
 
     def test_results_property(self):
@@ -72,8 +72,8 @@ class MyTestCase(unittest.TestCase):
                 self.assertEqual(self.calculator.result, c)
 
     def test_sample_mean(self):
-        list = [170.5, 161, 160, 170, 150.5]
-        self.calculator.sample_mean_(list)
+        listx = [170.5, 161, 160, 170, 150.5]
+        self.calculator.sample_mean_(listx)
         self.assertEqual(self.calculator.result, 3.692560087527351)
 
 

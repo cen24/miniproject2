@@ -57,13 +57,10 @@ def sample_mean(list):
 
     sq_total=0
 
-
-
     for var in range(len(list)):
 
         list_dev[var] = list[var] - meanx
         list_sq[var] = square(list_dev[var])
-        #print(list_sq[var])
         sq_total=list_sq[var]+sq_total
 
 
@@ -93,6 +90,7 @@ def sample_mean(list):
 
 class calculator:
     result = 0
+    list = [1, 2, 3, 4, 5]
 
     def __init__(self):
         pass

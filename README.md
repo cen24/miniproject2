@@ -17,7 +17,7 @@ See below for calculations that can be performed.
 - [ ] Population Variance
 - [ ] P Value
 - [ ] Proportion
-- [ ] Sample Mean
+- [x] Sample Mean
 - [ ] Sample Standard Deviation
 - [ ] Variance of sample proportion
 
