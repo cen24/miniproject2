@@ -1,7 +1,7 @@
 import math
 import statistics
 import csv
-import stat
+
 
 def add(a, b):
     c = a + b
@@ -88,8 +88,30 @@ def popvariance(list):
 
     n = len(list)
     c = sq_total / n
-    print(c)
+
     return c
+
+def pvalue(list):
+
+    meanx = mean(list)
+    stdevx = stdev(list)
+
+    meanx = meanx - stdevx
+
+    popx = popvariance(list)
+    popx = sqrt(popx)
+    n = sqrt(len(list))
+
+    popx = popx / n
+
+    c = meanx / popx
+
+    return c
+
+
+
+
+
 
 
 
@@ -107,7 +129,7 @@ def popvariance(list):
 # Population Correlation Coefficient
 # Confidence Interval
 # Population Variance
-# P Value(Rutvik)
+# P Value(Rutvik)-done
 # Proportion(Rutvik)
 # Sample Mean(Rutvik)
 # Sample Standard Deviation(Rutvik)
@@ -187,3 +209,28 @@ class calculator:
     def popvariance_(self, list):
         self.result = popvariance(list)
         return self.result
+    def pvalue_(self, list):
+        self.result = pvalue(list)
+        return self.result
+
+
+
+    def read_csv_add(self):
+        with open('uadd.csv', 'r') as f:
+            next(f)
+            reader = csv.reader(f)
+            your_list = list(reader)
+
+            #n = len(list)-1
+            #new_list = [range(1, 6), range(15, 20)]
+            #a = [range(0,n)]
+            #b = [range(0,n)]
+            #c = [range(0,n)]
+
+            for var in range(len(your_list)):
+                a = int(your_list[var][0])
+                b = int(your_list[var][1])
+                c = int(your_list[var][2])
+                print(a, b, c)
+
+

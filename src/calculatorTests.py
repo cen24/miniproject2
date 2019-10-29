@@ -73,6 +73,7 @@ class MyTestCase(unittest.TestCase):
             reader = csv.reader(f)
             your_list = list(reader)
 
+
             for var in range(len(your_list)):
                 a = int(your_list[var][0])
                 b = int(your_list[var][1])
@@ -86,9 +87,14 @@ class MyTestCase(unittest.TestCase):
         self.calculator.sample_mean_(listx)
         self.assertEqual(self.calculator.result, 3.692560087527351)
 
-    def test_sample_popvariance(self):
+    def test_popvariance(self):
+        #self.calculator.read_csv_add()
         self.calculator.popvariance_(list([1, 2, 3, 4, 5]))
         self.assertEqual(self.calculator.result, 2)
+
+    def test_pvalue(self):
+        self.calculator.pvalue_(list([1, 2, 3, 4, 5]))
+        self.assertEqual(self.calculator.result, 2.2434164902525686)
 
 
 
