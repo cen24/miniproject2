@@ -50,6 +50,10 @@ class MyTestCase(unittest.TestCase):
         self.calculator.stdev_(list([1, 2, 3, 4, 5]))
         self.assertEqual(self.calculator.result, 1.5811388300841898)
 
+    def test_zscore(self):
+        self.calculator.zscore_(5, list([1, 2, 3, 4, 5]))
+        self.assertEqual(self.calculator.result, 1.2649110640673518)
+
     def test_results_property(self):
         self.assertEqual(self.calculator.result, 0)
 

@@ -23,27 +23,29 @@ def square(a):
     return c
 
 def sqrt(a):
-    math.sqrt(a)
+    c = math.sqrt(a)
     return c
 
 def mean(list):
-    list([a, b, d, e, f])
     c = statistics.mean(list)
     return c
 
 def median(list):
-    list([a, b, d, e, f])
     c = statistics.median(list)
     return c
 
 def mode(list):
-    list([a, b, d, e, f])
     c = statistics.mode(list)
     return c
 
 def stdev(list):
-    list([a, b, d, e, f])
     c = statistics.stdev(list)
+    return c
+
+def zscore(z, list):
+    meanx = mean(list)
+    stdevx = stdev(list)
+    c = (z - meanx) / stdevx
     return c
 
 # Variance of population proportion
@@ -84,20 +86,25 @@ class calculator:
         self.result = square(a)
 
     def sqrt_(self, a):
-        self.result = math.sqrt(a)
-
-    def median_(self, list):
-        self.result = statistics.median(list)
-        return self.result
-
-    def mode_(self, list):
-        self.result = statistics.mode(list)
+        self.result = sqrt(a)
         return self.result
 
     def mean_(self, list):
-        self.result = statistics.mean(list)
+        self.result = mean(list)
+        return self.result
+
+    def median_(self, list):
+        self.result = median(list)
+        return self.result
+
+    def mode_(self, list):
+        self.result = mode(list)
         return self.result
 
     def stdev_(self, list):
-        self.result = statistics.stdev(list)
+        self.result = stdev(list)
+        return self.result
+
+    def zscore_(self, z, list):
+        self.result = zscore(z, list)
         return self.result
