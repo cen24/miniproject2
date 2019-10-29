@@ -10,7 +10,7 @@ See below for calculations that can be performed.
 - [X] Mode
 - [X] Population Standard Deviation
 - [ ] Variance of population proportion
-- [ ] Z-Score
+- [x] Z-Score
 - [ ] Standardized score
 - [ ] Population Correlation Coefficient
 - [ ] Confidence Interval
