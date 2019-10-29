@@ -11,45 +11,44 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.calculator, calculator)
 
     def test_add(self):
-        self.calculator.add(3, 3)
+        self.calculator.addition(3, 3)
         self.assertEqual(self.calculator.result, 6)
 
     def test_sub(self):
-        self.calculator.sub(3, 3)
+        self.calculator.subtraction(3, 3)
         self.assertEqual(self.calculator.result, 0)
 
     def test_times(self):
-        self.calculator.times(3, 3)
+        self.calculator.multiply(3, 3)
         self.assertEqual(self.calculator.result, 9)
 
     def test_div(self):
-        self.calculator.div(3, 3)
+        self.calculator.division(3, 3)
         self.assertEqual(self.calculator.result, 1)
 
     def test_square(self):
-        self.calculator.square(9)
+        self.calculator.square_(9)
         self.assertEqual(self.calculator.result, 81)
 
     def test_sqrt(self):
-        self.calculator.sqrt(81)
+        self.calculator.sqrt_(81)
         self.assertEqual(self.calculator.result, 9)
 
-    def test_mean(self):
-        self.calculator.mean(list([1, 2, 3, 4, 5]))
-        self.assertEqual(self.calculator.result, 3)
-
     def test_median(self):
-        self.calculator.median(list([2, 1, 5, 3, 4]))
+        self.calculator.median_(list([2, 1, 5, 3, 4]))
         self.assertEqual(self.calculator.result, 3)
 
     def test_mode(self):
-        self.calculator.mode(list([1, 2, 3, 4, 2]))
+        self.calculator.mode_(list([1, 2, 3, 4, 2]))
         self.assertEqual(self.calculator.result, 2)
 
-    def test_stdev(self):
-        self.calculator.stdev(list([1, 2, 3, 4, 5]))
-        self.assertEqual(self.calculator.result, 1.5811388300841898)
+    def test_mean(self):
+        self.calculator.mean_(list([1, 2, 3, 4, 5]))
+        self.assertEqual(self.calculator.result, 3)
 
+    def test_stdev(self):
+        self.calculator.stdev_(list([1, 2, 3, 4, 5]))
+        self.assertEqual(self.calculator.result, 1.5811388300841898)
 
     def test_results_property(self):
         self.assertEqual(self.calculator.result, 0)
@@ -65,9 +64,8 @@ class MyTestCase(unittest.TestCase):
                 b = int(your_list[var][1])
                 c = int(your_list[var][2])
 
-                self.calculator.add(a, b)
+                self.calculator.addition(a, b)
                 self.assertEqual(self.calculator.result, c)
-
 
 
 if __name__ == '__main__':
