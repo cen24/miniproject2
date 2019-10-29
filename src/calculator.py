@@ -50,6 +50,41 @@ def zscore(z, list):
 
 def sample_mean(list):
 
+    meanx = mean(list)
+    stdevx = stdev(list)
+
+    list_dev = list
+    list_sq = list
+
+    #print(stdevx)
+    #print(meanx)
+    #print(len(list))
+    sq_total=0
+
+
+
+    for var in range(len(list)):
+        #print("---------------------------")
+        #print(list[var])
+        list_dev[var] = list[var] - meanx
+        list_sq[var] = square(list_dev[var])
+        print(list_sq[var])
+        sq_total=list_sq[var]+sq_total
+    print(sq_total)
+
+
+
+
+
+
+
+    c=0
+
+    return c
+
+
+
+
 
 
 # Variance of population proportion
@@ -111,4 +146,8 @@ class calculator:
 
     def zscore_(self, z, list):
         self.result = zscore(z, list)
+        return self.result
+
+    def sample_mean_(self, list):
+        self.result = sample_mean(list)
         return self.result
