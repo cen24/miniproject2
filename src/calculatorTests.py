@@ -72,8 +72,9 @@ class MyTestCase(unittest.TestCase):
                 self.assertEqual(self.calculator.result, c)
 
     def test_sample_mean(self):
-        self.calculator.sample_mean_(list([1, 2, 3, 4, 5]))
-        self.assertEqual(0, 0)
+        list = [170.5, 161, 160, 170, 150.5]
+        self.calculator.sample_mean_(list)
+        self.assertEqual(self.calculator.result, 3.692560087527351)
 
 
 

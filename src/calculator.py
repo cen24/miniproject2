@@ -51,35 +51,27 @@ def zscore(z, list):
 def sample_mean(list):
 
     meanx = mean(list)
-    stdevx = stdev(list)
 
     list_dev = list
     list_sq = list
 
-    #print(stdevx)
-    #print(meanx)
-    #print(len(list))
     sq_total=0
 
 
 
     for var in range(len(list)):
-        #print("---------------------------")
-        #print(list[var])
+
         list_dev[var] = list[var] - meanx
         list_sq[var] = square(list_dev[var])
-        print(list_sq[var])
+        #print(list_sq[var])
         sq_total=list_sq[var]+sq_total
-    print(sq_total)
 
 
+    n = len(list) - 1
+    n1 = sq_total / n
+    n2 = sqrt(n1)
 
-
-
-
-
-    c=0
-
+    c = n2 / sqrt(len(list))
     return c
 
 
