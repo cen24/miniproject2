@@ -73,8 +73,23 @@ def sample_mean(list):
     return c
 
 def popvariance(list):
+
     meanx = mean(list)
-    listx = list
+
+    list_dev = list
+    list_sq = list
+
+    sq_total = 0
+
+    for var in range(len(list)):
+        list_dev[var] = list[var] - meanx
+        list_sq[var] = square(list_dev[var])
+        sq_total = list_sq[var] + sq_total
+
+    n = len(list)
+    c = sq_total / n
+    print(c)
+    return c
 
 
 
@@ -167,4 +182,8 @@ class calculator:
 
     def sample_mean_(self, list):
         self.result = sample_mean(list)
+        return self.result
+
+    def popvariance_(self, list):
+        self.result = popvariance(list)
         return self.result

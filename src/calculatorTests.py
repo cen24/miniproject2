@@ -86,6 +86,10 @@ class MyTestCase(unittest.TestCase):
         self.calculator.sample_mean_(listx)
         self.assertEqual(self.calculator.result, 3.692560087527351)
 
+    def test_sample_popvariance(self):
+        self.calculator.popvariance_(list([1, 2, 3, 4, 5]))
+        self.assertEqual(self.calculator.result, 2)
+
 
 
 
