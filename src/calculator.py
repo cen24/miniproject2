@@ -48,6 +48,8 @@ def zscore(z, list):
     c = (z - meanx) / stdevx
     return c
 
+def sample_mean(list):
+
 
 
 # Variance of population proportion
