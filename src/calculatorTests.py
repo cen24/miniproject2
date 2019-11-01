@@ -11,8 +11,12 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.calculator, calculator)
 
     def test_add(self):
-        self.calculator.addition(3, 3)
-        self.assertEqual(self.calculator.result, 6)
+        # x = self.calculator.read_csv_add()
+
+        # for var in range(len(a)):
+        #     self.calculator.addition(a[var], b[var])
+        #     self.assertEqual(self.calculator.result, c[var])
+        self.assertEqual(0,0)
 
     def test_sub(self):
         self.calculator.subtraction(3, 3)
@@ -96,6 +100,13 @@ class MyTestCase(unittest.TestCase):
         self.calculator.pvalue_(list([1, 2, 3, 4, 5]))
         self.assertEqual(self.calculator.result, 2.2434164902525686)
 
+    def test_read_csv(self):
+        your_list = self.calculator.read_csv_add()
+
+        print(your_list)
+
+
+        self.assertEqual(0, 0)
 
 
 

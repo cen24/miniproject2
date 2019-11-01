@@ -1,5 +1,6 @@
 import math
 import statistics
+import pandas as pd
 import csv
 
 
@@ -140,18 +141,7 @@ class calculator:
     list = [1, 2, 3, 4, 5]
     list_mode =[1, 2, 3, 4, 2]
 
-  #  def listy(self):
-   #  with open('uadd.csv', 'r') as f:
-    #        next(f)
-     #       reader = csv.reader(f)
-      #      your_list = list(reader)
-       # for var in range(len(your_list)):
-        #    a[var] = int(your_list[var][0])
-         #   b[var] = int(your_list[var][1])
-          #  c[var] = int(your_list[var][2])
-#
- #           self.list2 = a
-  #      return self.list2
+
         
 
 
@@ -215,22 +205,36 @@ class calculator:
 
 
 
+
     def read_csv_add(self):
-        with open('uadd.csv', 'r') as f:
-            next(f)
-            reader = csv.reader(f)
-            your_list = list(reader)
 
-            #n = len(list)-1
-            #new_list = [range(1, 6), range(15, 20)]
-            #a = [range(0,n)]
-            #b = [range(0,n)]
-            #c = [range(0,n)]
+        #     with open('uadd.csv', 'r') as f:
+        #         next(f)
+        #         reader = csv.reader(f)
+        #         your_list = list(reader)
+        #         #print(your_list)
 
-            for var in range(len(your_list)):
-                a = int(your_list[var][0])
-                b = int(your_list[var][1])
-                c = int(your_list[var][2])
-                print(a, b, c)
+
+        data = pd.read_csv("uadd.csv")
+
+       # print(data)
+
+
+
+
+        return data
+
+
+                # a = b = c = []
+                # for var in range(len(your_list)):
+                #     a.append(int(your_list[var][0]))
+                #     b.append(int(your_list[var][1]))
+                #     c.append(int(your_list[var][2]))
+                    #a[var] = int(your_list[var][0])
+                    #b[var] = int(your_list[var][1])
+                    #c[var] = int(your_list[var][2])
+
+
+
 
 
