@@ -4,4 +4,4 @@ ADD . .
 
 RUN pip3 install pandas
 
-CMD [ "python", "./src/Cal2Test.py" ]
+CMD [ "python", "../src/Cal2Test.py" ]
