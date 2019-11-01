@@ -8,7 +8,7 @@ class read:
         data = pd.read_csv(obj)
         data = data.values
 
-        a   = []
+        a = []
         b = []
         c = []
         for var in range(len(data)):
