@@ -1,7 +1,10 @@
 import unittest
+
 from CALCULATOR.Cal2 import cal2
 from CALCULATOR.readcsv import read
-from CALCULATOR.Stat import xyz
+from CALCULATOR.new import xyz
+
+
 
 
 class MyTestCase(unittest.TestCase):
@@ -60,16 +63,42 @@ class MyTestCase(unittest.TestCase):
             self.cal2.sqrt_(y[0][var])
             self.assertEqual(int(self.cal2.res2), int(y[1][var]))
 
-    # def test_array(self):
+    def test_array_csv_mean(self):
+
+        y = read.read_array("../src/CSV FILES/array2.csv")
+
+        for var in range(len(y)):
+            x = xyz.mean_(self,y[var])
+            print(x)
+        self.assertEqual(0,0)
+
+    def test_array_csv_median(self):
+
+        y = read.read_array("../src/CSV FILES/array2.csv")
+
+        for var in range(len(y)):
+            x = xyz.median_(self, y[var])
+            print(x)
+        self.assertEqual(0, 0)
+
+    # def test_array_csv_mode(self):
+    #
     #     y = read.read_array("../src/CSV FILES/array2.csv")
     #
     #     for var in range(len(y)):
-    #         list = y[var]
-    #         print(list)
-    #          x = self.cal2.mean_(list)
-    #          print(x)
+    #         x = xyz.mode_(self, y[var])
     #
-    #     self.assertEqual(0,0)
+    #     self.assertEqual(0, 0)
+
+    def test_array_csv_stdev(self):
+
+        y = read.read_array("../src/CSV FILES/array2.csv")
+
+        for var in range(len(y)):
+            x = xyz.stdev_(self, y[var])
+            print(x)
+
+        self.assertEqual(0, 0)
 
 
 
