@@ -54,3 +54,7 @@ class cal2:
     def sqrt_(self, a):
         self.res2 = sqrt(a)
         return self.res2
+
+    def mean_(list):
+        c = statistics.mean(list)
+        return c
