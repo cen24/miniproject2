@@ -67,9 +67,10 @@ class MyTestCase(unittest.TestCase):
     def test_array_csv_mean(self):
 
         y = read.read_array("../src/CSV FILES/array2.csv")
+        z = read.read_array("../src/CSV FILES/result.csv")
 
         for var in range(len(y)):
-            x = self.xyz.mean_(y[var])
+            self.xyz.mean_(y[var])
             self.assertEqual(round(self.xyz.result),round(z[var][0]))
 
     def test_array_csv_median(self):
