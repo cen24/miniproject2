@@ -1,5 +1,5 @@
 import math
-
+import statistics
 
 
 def add(a, b):
@@ -25,7 +25,6 @@ def square(a):
 def sqrt(a):
     c = math.sqrt(a)
     return c
-
 
 
 class cal2:
@@ -55,6 +54,3 @@ class cal2:
         self.res2 = sqrt(a)
         return self.res2
 
-    def mean_(list):
-        c = statistics.mean(list)
-        return c
