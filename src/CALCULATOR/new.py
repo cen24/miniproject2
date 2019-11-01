@@ -19,10 +19,8 @@ def stdev_(list):
 class xyz:
     result = 0
 
-    def __init__(self):
-        pass
 
-    def mean(self, list):
+    def mean_(self, list):
         self.result = mean_(list)
         return self.result
 
