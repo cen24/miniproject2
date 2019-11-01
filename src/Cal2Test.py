@@ -10,6 +10,7 @@ from CALCULATOR.new import xyz
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.cal2 = cal2()
+        self.xyz = xyz()
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.cal2, cal2)
@@ -68,18 +69,17 @@ class MyTestCase(unittest.TestCase):
         y = read.read_array("../src/CSV FILES/array2.csv")
 
         for var in range(len(y)):
-            x = xyz.mean_(self,y[var])
-            print(x)
-        self.assertEqual(0,0)
+            x = self.xyz.mean_(y[var])
+            self.assertEqual(round(self.xyz.result),round(z[var][0]))
 
     def test_array_csv_median(self):
 
         y = read.read_array("../src/CSV FILES/array2.csv")
+        z = read.read_array("../src/CSV FILES/result.csv")
 
         for var in range(len(y)):
-            x = xyz.median_(self, y[var])
-            print(x)
-        self.assertEqual(0, 0)
+            self.xyz.median_(y[var])
+            self.assertEqual(round(self.xyz.result),round(z[var][1]))
 
     # def test_array_csv_mode(self):
     #
@@ -93,12 +93,11 @@ class MyTestCase(unittest.TestCase):
     def test_array_csv_stdev(self):
 
         y = read.read_array("../src/CSV FILES/array2.csv")
+        z = read.read_array("../src/CSV FILES/result.csv")
 
         for var in range(len(y)):
-            x = xyz.stdev_(self, y[var])
-            print(x)
-
-        self.assertEqual(0, 0)
+            self.xyz.stdev_(y[var])
+            self.assertEqual(round(self.xyz.result),round(z[var][2]))
 
 
 
