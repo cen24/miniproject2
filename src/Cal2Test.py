@@ -1,7 +1,7 @@
 import unittest
 from CALCULATOR.Cal2 import cal2
 from CALCULATOR.readcsv import read
-
+from CALCULATOR.Stat import xyz
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.cal2 = cal2()
@@ -59,8 +59,17 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(int(self.cal2.res2), int(y[1][var]))
 
     def test_array(self):
-        y = read.read_array("../src/CSV FILES/array.csv")
-        print(y[0])
+        y = read.read_array("../src/CSV FILES/array2.csv")
+
+        for var in range(len(y)):
+            list = y[var]
+            x = self.xyz.mean(list)
+            print(x)
+
+
+
+
+
 
 
         self.assertEqual(0,0)
