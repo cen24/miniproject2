@@ -110,7 +110,6 @@ class MyTestCase(unittest.TestCase):
 
         for var in range(len(y)):
             x = self.z.zscore(5,y[var])
-            print(x)
             self.assertEqual(0,0)
 
 
