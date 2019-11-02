@@ -1,17 +1,14 @@
 import math
+from CALCULATOR.SEPRATE.addition import addition2
+from CALCULATOR.SEPRATE.subtraction import subtraction
+from CALCULATOR.SEPRATE.multiply import multiply
+from CALCULATOR.SEPRATE.division import division
 
 
-def add(a, b):
-    c = a + b
-    return c
 
-def sub(a, b):
-    c = a - b
-    return c
 
-def times(a, b):
-    c = a * b
-    return c
+
+
 
 def div(a, b):
     c = a / b
@@ -26,23 +23,33 @@ def sqrt(a):
     return c
 
 
-class cal2:
+class cal2():
     res2 = 0
 
+    def __init__(self):
+        pass
+
+    def setUp(self) -> None:
+        self.addition2 = addition2()
+        self.subtraction = subtraction()
+        self.multiply = multiply()
+        self.division = division()
+
+
     def addition(self, a, b):
-        self.res2 = add(a, b)
+        self.res2 = addition2.addition3(self,a,b)
         return self.res2
 
     def subtraction(self, a, b):
-        self.res2 = sub(a, b)
+        self.res2 = subtraction.subtraction(self,a, b)
         return self.res2
 
     def multiply(self, a, b):
-        self.res2 = times(a, b)
+        self.res2 = multiply.multiply(self,a, b)
         return self.res2
 
     def division(self, a, b):
-        self.res2 = div(a, b)
+        self.res2 = division.division(self,a,b)
         return self.res2
 
     def square_(self, a):
