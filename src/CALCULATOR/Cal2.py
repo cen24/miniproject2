@@ -3,6 +3,8 @@ from CALCULATOR.SEPRATE.addition import addition2
 from CALCULATOR.SEPRATE.subtraction import subtraction
 from CALCULATOR.SEPRATE.multiply import multiply
 from CALCULATOR.SEPRATE.division import division
+from CALCULATOR.SEPRATE.square import square
+from CALCULATOR.SEPRATE.sqrt import sqrt
 
 
 
@@ -10,17 +12,12 @@ from CALCULATOR.SEPRATE.division import division
 
 
 
-def div(a, b):
-    c = a / b
-    return c
 
-def square(a):
-    c = a * a
-    return c
 
-def sqrt(a):
-    c = math.sqrt(a)
-    return c
+
+
+
+
 
 
 class cal2():
@@ -34,29 +31,30 @@ class cal2():
         self.subtraction = subtraction()
         self.multiply = multiply()
         self.division = division()
-
+        self.square = square()
+        self.sqrt = sqrt()
 
     def addition(self, a, b):
-        self.res2 = addition2.addition3(self,a,b)
+        self.res2 = addition2.addition3(self, a, b)
         return self.res2
 
     def subtraction(self, a, b):
-        self.res2 = subtraction.subtraction(self,a, b)
+        self.res2 = subtraction.subtraction(self, a, b)
         return self.res2
 
     def multiply(self, a, b):
-        self.res2 = multiply.multiply(self,a, b)
+        self.res2 = multiply.multiply(self, a, b)
         return self.res2
 
     def division(self, a, b):
-        self.res2 = division.division(self,a,b)
+        self.res2 = division.division(self, a, b)
         return self.res2
 
     def square_(self, a):
-        self.res2 = square(a)
+        self.res2 = square.square_(self, a)
         return self.res2
 
     def sqrt_(self, a):
-        self.res2 = sqrt(a)
+        self.res2 = sqrt.sqrt(self, a)
         return self.res2
 

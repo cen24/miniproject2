@@ -103,11 +103,11 @@ class MyTestCase(unittest.TestCase):
     def test_array_csv_mode(self):
 
         y = read.read_array("../src/CSV FILES/array2.csv")
-        z = read.read_array("../src/CSV FILES/result.csv")
+        z = read.read_array("../src/CSV FILES/result2.csv")
 
         for var in range(len(y)):
             self.xyz.mode_(y[var])
-            self.assertEqual(round(self.xyz.result), round(z[var][3]))
+            self.assertEqual(round(self.xyz.result), round(z[var][0]))
 
     def test_zscore(self):
         y = read.read_array("../src/CSV FILES/array2.csv")
