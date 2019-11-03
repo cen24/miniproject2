@@ -4,10 +4,7 @@ def sqrt2(a):
 
 
 
-    if a == -1 :
-        a = a * -1
-        c = math.sqrt(a)
-    elif a == -3:
+    if a < 0 :
         a = a * -1
         c = math.sqrt(a)
     else:

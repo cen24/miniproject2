@@ -1,9 +1,14 @@
 from CALCULATOR.new import xyz
 
-class z:
-    def zscore(self,z,list):
 
-        meanx = xyz.mean_(self,list)
-        stdevx = xyz.stdev_(self,list)
-        c = (z - meanx) / stdevx
+def zscore_(self, z, list):
+    meanx = xyz.mean_(self, list)
+    stdevx = xyz.stdev_(self, list)
+    c = (z - meanx) / stdevx
+    return c
+
+class z:
+    c = 0;
+    def zscore(self,z,list):
+        c = zscore_(self,z , list)
         return c
