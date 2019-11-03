@@ -124,7 +124,7 @@ class MyTestCase(unittest.TestCase):
 
         for var in range(len(y)):
             x = self.s.sample_mean(y[var])
-            print(x)
+            #print(x)
             self.assertEqual(0,0)
 
 

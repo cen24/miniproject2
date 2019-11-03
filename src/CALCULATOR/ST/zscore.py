@@ -11,4 +11,5 @@ class z:
     c = 0;
     def zscore(self,z,list):
         c = zscore_(self,z , list)
+        print(c)
         return c
