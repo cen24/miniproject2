@@ -24,7 +24,6 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.cal2, cal2)
 
     def test_add_from_csv(self):
-
         y = read.read_csv("../src/CSV FILES/uadd.csv")
 
         for var in range(len(y[0])):
