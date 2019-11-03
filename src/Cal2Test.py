@@ -4,6 +4,7 @@ from CALCULATOR.Cal2 import cal2
 from CALCULATOR.readcsv import read
 from CALCULATOR.new import xyz
 from CALCULATOR.ST.zscore import z
+from CALCULATOR.ST.samplemean import s
 
 
 
@@ -16,6 +17,7 @@ class MyTestCase(unittest.TestCase):
         self.cal2 = cal2()
         self.xyz = xyz()
         self.z = z()
+        self.s = s()
 
 
     def test_instantiate_calculator(self):
@@ -26,9 +28,6 @@ class MyTestCase(unittest.TestCase):
         y = read.read_csv("../src/CSV FILES/uadd.csv")
 
         for var in range(len(y[0])):
-            #back uP
-            #self.addition2.addition2(y[0][var], y[1][var])
-            # self.cal2.additionx(5,6)
             self.cal2.addition(y[0][var], y[1][var])
             self.assertEqual(self.cal2.res2, y[2][var])
 
@@ -112,11 +111,21 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(round(self.xyz.result), round(z[var][0]))
 
     def test_zscore(self):
-        y = read.read_array("../src/CSV FILES/array2.csv")
 
+        y = read.read_array("../src/CSV FILES/array.csv")
 
         for var in range(len(y)):
             x = self.z.zscore(5,y[var])
+            print(x)
+            self.assertEqual(0,0)
+
+    def test_samplemean(self):
+
+        y = read.read_array("../src/CSV FILES/array.csv")
+
+        for var in range(len(y)):
+            x = self.s.sample_mean(y[var])
+            print(x)
             self.assertEqual(0,0)
 
 
