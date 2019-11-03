@@ -79,7 +79,6 @@ class MyTestCase(unittest.TestCase):
 
 
         for var in range(len(y)):
-            print(y[var])
             self.xyz.mean_(y[var])
             self.assertEqual(round(self.xyz.result), round(z[var][0]))
 
