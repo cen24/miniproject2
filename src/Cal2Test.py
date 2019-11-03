@@ -75,16 +75,18 @@ class MyTestCase(unittest.TestCase):
 
     def test_array_csv_mean(self):
 
-        y = read.read_array("../src/CSV FILES/array2.csv")
+        y = read.read_array("../src/CSV FILES/array.csv")
         z = read.read_array("../src/CSV FILES/result.csv")
 
+
         for var in range(len(y)):
+            print(y[var])
             self.xyz.mean_(y[var])
-            self.assertEqual(round(self.xyz.result),round(z[var][0]))
+            self.assertEqual(round(self.xyz.result), round(z[var][0]))
 
     def test_array_csv_median(self):
 
-        y = read.read_array("../src/CSV FILES/array2.csv")
+        y = read.read_array("../src/CSV FILES/array.csv")
         z = read.read_array("../src/CSV FILES/result.csv")
 
         for var in range(len(y)):
@@ -93,7 +95,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_array_csv_stdev(self):
 
-        y = read.read_array("../src/CSV FILES/array2.csv")
+        y = read.read_array("../src/CSV FILES/array.csv")
         z = read.read_array("../src/CSV FILES/result.csv")
 
         for var in range(len(y)):
@@ -102,7 +104,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_array_csv_mode(self):
 
-        y = read.read_array("../src/CSV FILES/array2.csv")
+        y = read.read_array("../src/CSV FILES/array.csv")
         z = read.read_array("../src/CSV FILES/result2.csv")
 
         for var in range(len(y)):

@@ -25,6 +25,7 @@ class read:
         z = [a, b, c]
 
         return z
+
     def read_array(obj):
         data = pd.read_csv(obj)
         data = data.values
@@ -49,3 +50,4 @@ class read:
 
         z = [a, b]
         return z
+

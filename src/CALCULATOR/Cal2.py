@@ -8,18 +8,6 @@ from CALCULATOR.SEPRATE.sqrt import sqrt
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 class cal2():
     res2 = 0
 
