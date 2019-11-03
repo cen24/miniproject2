@@ -1,115 +1,138 @@
 import unittest
-import csv
-from calculator import calculator
+
+from CALCULATOR.Cal2 import cal2
+from CALCULATOR.readcsv import read
+from CALCULATOR.new import xyz
+from CALCULATOR.ST.zscore import z
+from CALCULATOR.ST.samplemean import s
+
+
+
+
 
 
 class MyTestCase(unittest.TestCase):
+
     def setUp(self) -> None:
-        self.calculator = calculator()
+        self.cal2 = cal2()
+        self.xyz = xyz()
+        self.z = z()
+        self.s = s()
+
 
     def test_instantiate_calculator(self):
-        self.assertIsInstance(self.calculator, calculator)
+        self.assertIsInstance(self.cal2, cal2)
 
-    def test_add(self):
-        # x = self.calculator.read_csv_add()
+    def test_add_from_csv(self):
 
-        # for var in range(len(a)):
-        #     self.calculator.addition(a[var], b[var])
-        #     self.assertEqual(self.calculator.result, c[var])
-        self.assertEqual(0,0)
+        y = read.read_csv("../src/CSV FILES/uadd.csv")
 
-    def test_sub(self):
-        self.calculator.subtraction(3, 3)
-        self.assertEqual(self.calculator.result, 0)
+        for var in range(len(y[0])):
+            self.cal2.addition(y[0][var], y[1][var])
+            self.assertEqual(self.cal2.res2, y[2][var])
 
-    def test_times(self):
-        self.calculator.multiply(3, 3)
-        self.assertEqual(self.calculator.result, 9)
 
-    def test_div(self):
-        self.calculator.division(3, 3)
-        self.assertEqual(self.calculator.result, 1)
+    def test_sub_from_csv(self):
 
-    def test_square(self):
-        self.calculator.square_(9)
-        self.assertEqual(self.calculator.result, 81)
+        y = read.read_csv("../src/CSV FILES/Unit Test Subtraction.csv")
 
-    def test_sqrt(self):
-        self.calculator.sqrt_(81)
-        self.assertEqual(self.calculator.result, 9)
+        for var in range(len(y[0])):
+            self.cal2.subtraction(y[0][var], y[1][var])
+            self.assertEqual(self.cal2.res2, y[2][var]*-1)
 
-    def test_median(self):
-        self.calculator.median_(self.calculator.list)
-        self.assertEqual(self.calculator.result, 3)
+    def test_mul_from_csv(self):
 
-    def test_mode(self):
-        self.calculator.mode_(self.calculator.list_mode)
-        self.assertEqual(self.calculator.result, 2)
+        y = read.read_csv("../src/CSV FILES/Unit Test Multiplication.csv")
 
-    def test_mean(self):
-        self.calculator.mean_(self.calculator.list)
-        self.assertEqual(self.calculator.result, 3)
+        for var in range(len(y[0])):
+            self.cal2.multiply(y[0][var], y[1][var])
+            self.assertEqual(self.cal2.res2, y[2][var])
 
-    def test_stdev(self):
-        self.calculator.stdev_(self.calculator.list)
-        self.assertEqual(self.calculator.result, 1.5811388300841898)
+    def test_div_from_csv(self):
+
+        y = read.read_csv("../src/CSV FILES/Unit Test Division.csv")
+
+        for var in range(len(y[0])):
+            self.cal2.division(y[1][var], y[0][var])
+            self.assertEqual(int(self.cal2.res2), int(y[2][var]))
+
+    def test_square_from_csv(self):
+
+        y = read.read_csv2("../src/CSV FILES/Unit Test Square.csv")
+
+        for var in range(len(y)):
+            self.cal2.square_(y[0][var])
+            self.assertEqual(int(self.cal2.res2), int(y[1][var]))
+
+    def test_sqrt_from_csv(self):
+
+        y = read.read_csv2("../src/CSV FILES/Unit Test Square Root.csv")
+
+        for var in range(len(y)):
+            self.cal2.sqrt_(y[0][var])
+            self.assertEqual(int(self.cal2.res2), int(y[1][var]))
+
+    def test_array_csv_mean(self):
+
+        y = read.read_array("../src/CSV FILES/array.csv")
+        z = read.read_array("../src/CSV FILES/result.csv")
+
+
+        for var in range(len(y)):
+            print(y[var])
+            self.xyz.mean_(y[var])
+            self.assertEqual(round(self.xyz.result), round(z[var][0]))
+
+    def test_array_csv_median(self):
+
+        y = read.read_array("../src/CSV FILES/array.csv")
+        z = read.read_array("../src/CSV FILES/result.csv")
+
+        for var in range(len(y)):
+            self.xyz.median_(y[var])
+            self.assertEqual(round(self.xyz.result),round(z[var][1]))
+
+    def test_array_csv_stdev(self):
+
+        y = read.read_array("../src/CSV FILES/array.csv")
+        z = read.read_array("../src/CSV FILES/result.csv")
+
+        for var in range(len(y)):
+            self.xyz.stdev_(y[var])
+            self.assertEqual(round(self.xyz.result), round(z[var][2]))
+
+    def test_array_csv_mode(self):
+
+        y = read.read_array("../src/CSV FILES/array.csv")
+        z = read.read_array("../src/CSV FILES/result2.csv")
+
+        for var in range(len(y)):
+            self.xyz.mode_(y[var])
+            self.assertEqual(round(self.xyz.result), round(z[var][0]))
 
     def test_zscore(self):
-        self.calculator.zscore_(5, self.calculator.list)
-        self.assertEqual(self.calculator.result, 1.2649110640673518)
 
-    def test_results_property(self):
-        self.assertEqual(self.calculator.result, 0)
+        y = read.read_array("../src/CSV FILES/array.csv")
 
+        for var in range(len(y)):
+            x = self.z.zscore(5,y[var])
+            print(x)
+            self.assertEqual(0,0)
 
-   #def test_read_csv(self):
+    def test_samplemean(self):
 
-        #print(self.calculator.listy)
-        #x = []
-        #x = self.calculator.listy()
-        #print(x)
-        #self.assertEqual(self.calculator.result, 0)
+        y = read.read_array("../src/CSV FILES/array.csv")
 
-
-    def test_read_csv_add(self):
-        with open('uadd.csv', 'r') as f:
-            next(f)
-            reader = csv.reader(f)
-            your_list = list(reader)
-
-
-            for var in range(len(your_list)):
-                a = int(your_list[var][0])
-                b = int(your_list[var][1])
-                c = int(your_list[var][2])
-
-                self.calculator.addition(a, b)
-                self.assertEqual(self.calculator.result, c)
-
-    def test_sample_mean(self):
-        listx = [170.5, 161, 160, 170, 150.5]
-        self.calculator.sample_mean_(listx)
-        self.assertEqual(self.calculator.result, 3.692560087527351)
-
-    def test_popvariance(self):
-        #self.calculator.read_csv_add()
-        self.calculator.popvariance_(list([1, 2, 3, 4, 5]))
-        self.assertEqual(self.calculator.result, 2)
-
-    def test_pvalue(self):
-        self.calculator.pvalue_(list([1, 2, 3, 4, 5]))
-        self.assertEqual(self.calculator.result, 2.2434164902525686)
-
-    def test_read_csv(self):
-        your_list = self.calculator.read_csv_add()
-
-        print(your_list)
-
-
-        self.assertEqual(0, 0)
+        for var in range(len(y)):
+            x = self.s.sample_mean(y[var])
+            print(x)
+            self.assertEqual(0,0)
 
 
 
 
-if __name__ == '__main__':
-    unittest.main()
+
+
+
+    if __name__ == '__main__':
+        unittest.main()
