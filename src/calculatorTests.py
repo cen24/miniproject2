@@ -1,6 +1,6 @@
 import unittest
 
-from CALCULATOR.Cal2 import cal2
+from CALCULATOR.SEPRATE.Cal2 import cal2
 from CALCULATOR.readcsv import read
 from CALCULATOR.Statistical.mean import mean
 from CALCULATOR.Statistical.median import median
@@ -19,7 +19,6 @@ class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
         self.cal2 = cal2()
-        #self.xyz = xyz()
         self.z = z()
         self.s = s()
         self.mean = mean()
