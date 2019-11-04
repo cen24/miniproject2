@@ -2,7 +2,10 @@ import unittest
 
 from CALCULATOR.Cal2 import cal2
 from CALCULATOR.readcsv import read
-from CALCULATOR.new import xyz
+from CALCULATOR.Statistical.mean import mean
+from CALCULATOR.Statistical.median import median
+from CALCULATOR.Statistical.mode import mode
+from CALCULATOR.Statistical.stddev import stddev
 from CALCULATOR.ST.zscore import z
 from CALCULATOR.ST.samplemean import s
 from CALCULATOR.ST.Population_Standard_Deviation import PopulationStandardDeviation
@@ -16,9 +19,14 @@ class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
         self.cal2 = cal2()
-        self.xyz = xyz()
+        #self.xyz = xyz()
         self.z = z()
         self.s = s()
+        self.mean = mean()
+        self.median = median()
+        self.mean = mean()
+        self.mode = mode()
+        self.stddev = stddev()
         self.PopulationStandardDeviation = PopulationStandardDeviation()
 
 
@@ -80,8 +88,8 @@ class MyTestCase(unittest.TestCase):
 
 
         for var in range(len(y)):
-            self.xyz.mean_(y[var])
-            self.assertEqual(round(self.xyz.result), round(z[var][0]))
+            self.mean.mean(y[var])
+            self.assertEqual(round(self.mean.result), round(z[var][0]))
 
     def test_array_csv_median(self):
 
@@ -89,8 +97,8 @@ class MyTestCase(unittest.TestCase):
         z = read.read_array("../src/CSV FILES/result.csv")
 
         for var in range(len(y)):
-            self.xyz.median_(y[var])
-            self.assertEqual(round(self.xyz.result),round(z[var][1]))
+            self.median.median(y[var])
+            self.assertEqual(round(self.median.result),round(z[var][1]))
 
     def test_array_csv_stdev(self):
 
@@ -98,8 +106,8 @@ class MyTestCase(unittest.TestCase):
         z = read.read_array("../src/CSV FILES/result.csv")
 
         for var in range(len(y)):
-            self.xyz.stdev_(y[var])
-            self.assertEqual(round(self.xyz.result), round(z[var][2]))
+            self.stddev.stddev(y[var])
+            self.assertEqual(round(self.stddev.result), round(z[var][2]))
 
     def test_array_csv_mode(self):
 
@@ -107,8 +115,8 @@ class MyTestCase(unittest.TestCase):
         z = read.read_array("../src/CSV FILES/result2.csv")
 
         for var in range(len(y)):
-            self.xyz.mode_(y[var])
-            self.assertEqual(round(self.xyz.result), round(z[var][0]))
+            self.mode.mode(y[var])
+            self.assertEqual(round(self.mode.result), round(z[var][0]))
 
     def test_zscore(self):
 
@@ -125,8 +133,9 @@ class MyTestCase(unittest.TestCase):
 
         for var in range(len(y)):
             x = self.s.sample_mean(y[var])
-            #print(x)
+            print(x)
             self.assertEqual(0,0)
+
     def test_PopulationStandardDeviation(self):
 
         y = read.read_array("../src/CSV FILES/array.csv")
