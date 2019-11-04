@@ -5,6 +5,7 @@ from CALCULATOR.readcsv import read
 from CALCULATOR.new import xyz
 from CALCULATOR.ST.zscore import z
 from CALCULATOR.ST.samplemean import s
+from CALCULATOR.ST.Population_Standard_Deviation import PopulationStandardDeviation
 
 
 
@@ -18,6 +19,7 @@ class MyTestCase(unittest.TestCase):
         self.xyz = xyz()
         self.z = z()
         self.s = s()
+        self.PopulationStandardDeviation = PopulationStandardDeviation()
 
 
     def test_instantiate_calculator(self):
@@ -125,7 +127,14 @@ class MyTestCase(unittest.TestCase):
             x = self.s.sample_mean(y[var])
             #print(x)
             self.assertEqual(0,0)
+    def test_PopulationStandardDeviation(self):
 
+        y = read.read_array("../src/CSV FILES/array.csv")
+
+        for var in range(len(y)):
+            x = self.PopulationStandardDeviation.pop_std_dev(y[var])
+            print(x)
+            self.assertEqual(0,0)
 
 
 
