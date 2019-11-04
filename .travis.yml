@@ -6,4 +6,4 @@ python:
 services: docker
 
 script :
-  - python ./src/calculatorTest.py
+  - python ../src/calculatorTest.py
