@@ -1,10 +1,10 @@
 #σ = sqrt[ Σ ( Xi – μ )2 / N ]
 from CALCULATOR.SEPRATE.sqrt import sqrt
-from CALCULATOR.new import xyz
+from CALCULATOR.Statistical.mean import mean
 from CALCULATOR.SEPRATE.square import square
 
 def Pop_Std_Dev(self, list):
-    meanx = xyz.mean_(self,list)
+    meanx = mean.mean(self,list)
 
     list_dev = list
     list_sq = list

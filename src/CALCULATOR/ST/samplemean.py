@@ -1,9 +1,9 @@
-from CALCULATOR.new import xyz
+from CALCULATOR.Statistical.mean import mean
 from CALCULATOR.SEPRATE.sqrt import sqrt
 
 
 def sample_mean_(self, list):
-    meanx = xyz.mean_(self, list)
+    meanx = mean.mean(self, list)
 
     list_dev = list
     list_sq = list
