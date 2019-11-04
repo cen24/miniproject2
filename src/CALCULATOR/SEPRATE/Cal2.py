@@ -1,5 +1,5 @@
 import math
-from CALCULATOR.SEPRATE.addition import addition2
+from CALCULATOR.SEPRATE.addition import addition
 from CALCULATOR.SEPRATE.subtraction import subtraction
 from CALCULATOR.SEPRATE.multiply import multiply
 from CALCULATOR.SEPRATE.division import division
@@ -15,7 +15,7 @@ class cal2():
         pass
 
     def setUp(self) -> None:
-        self.addition2 = addition2()
+        self.addition = addition()
         self.subtraction = subtraction()
         self.multiply = multiply()
         self.division = division()
@@ -23,7 +23,7 @@ class cal2():
         self.sqrt = sqrt()
 
     def addition(self, a, b):
-        self.res2 = addition2.addition3(self, a, b)
+        self.res2 = addition.addition(self, a, b)
         return self.res2
 
     def subtraction(self, a, b):
