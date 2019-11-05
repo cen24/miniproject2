@@ -1,1 +1,0 @@
-#Variance of sample proportion = sp2 = pq / (n - 1)
