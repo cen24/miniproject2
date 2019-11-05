@@ -2,17 +2,9 @@ from Statisticss.computation.statistics import mean
 from Statisticss.computation.statistics import median
 from Statisticss.computation.statistics import mode
 from Statisticss.computation.statistics import stdev
-from Statisticss.computation.zscore import zscore
+#from Statisticss.computation.zscore import zscore
+#from Statisticss.computation.proportion import prop
 
-# new formulas added
-from Statisticss.computation.proportion import prop
-
-
-def count(list):
-    list = [1, 1, 1, 2, 3, 4, 5]
-    c = len(list)
-
-    return c
 
 class statisticss:
     result = 0
@@ -39,13 +31,13 @@ class statisticss:
         self.result = stdev(list)
         return self.result
 
-    def zscore_(self, z, list):
-        self.result = zscore(z, list)
-        return self.result
-
-    def proportion(self, a, b):
-        self.result = prop(a, b)
-        return self.result
+    # def zscore_(self, z, list):
+    #     self.result = zscore(z, list)
+    #     return self.result
+    #
+    # def proportion(self, a, b):
+    #     self.result = prop(a, b)
+    #     return self.result
 
         # Variance of population proportion
         # Standardized score
