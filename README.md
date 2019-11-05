@@ -15,11 +15,11 @@ See below for calculations that can be performed.
 - [x] Z-Score
 - [x] Standardized score - is it same as z score
 - [ ] Population Correlation Coefficient
-- [ ] Confidence Interval
+- [X] Confidence Interval
 - [x] Population Variance
 - [x] Sample Variance
 - [x] P Value
-- [ ] Proportion
+- [X] Proportion
 - [x] Sample Mean
 - [ ] Sample Standard Deviation
 - [ ] Variance of sample proportion
