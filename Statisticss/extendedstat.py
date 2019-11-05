@@ -1,8 +1,8 @@
 
-from Statisticss.computation.zscore import zscore
+from Statisticss.computation.extended.zscore import zscore
 
 # new formulas added
-from Statisticss.computation.proportion import prop
+from Statisticss.computation.extended.proportion import prop
 
 
 def count(list):

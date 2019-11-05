@@ -1,10 +1,12 @@
 import unittest
 
 from Statisticss.statisticss import statisticss
+from Statisticss.extendedstat import extendedstat
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.statisticss = statisticss()
+        self.extendedstat = extendedstat()
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statisticss, statisticss)
@@ -29,9 +31,9 @@ class MyTestCase(unittest.TestCase):
         #self.statisticss.zscore_(5, self.statisticss.list)
         #self.assertEqual(self.statisticss.result, 1.2649110640673518)
 
-    def test_prop(self):
-        self.statisticss.proportion(20, 4)
-        self.assertEqual(self.statisticss.result, 5)
+    # def test_prop(self):
+    #     self.extendedstat.proportion(20, 4)
+    #     self.assertAlmostEqual(self.statisticss.result, 5)
 
     def test_results_property(self):
         self.assertEqual(self.statisticss.result, 0)
