@@ -8,3 +8,4 @@ def prop(a, b):
 # so Y = 5x, where K is the gradient
     k = a / b
     return k
+

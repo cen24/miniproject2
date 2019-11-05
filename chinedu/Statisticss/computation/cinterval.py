@@ -1,6 +1,6 @@
 from Statisticss.computation.stdev import stdev
 from Statisticss.computation.mean import mean
-from Statisticss.computation.samplemean import s
+from Statisticss.computation.sampmean import s
 
 import math
 
@@ -20,9 +20,11 @@ def cinterval(s):
 
     df = n - 1
     #1, above should be used  to calculate Tvalue
+    #https://www.statisticshowto.datasciencecentral.com/
+    # probability-and-statistics/confidence-interval/
 
     tval = 2.262
-    h = (s - mean ) / (stdev / math.sqrt(n)) #h should equal Tval
+    h = (s - mean ) / (stdev / math.sqrt(n)) #h should equal Tval and tval should be removed
     se = stdev / math.sqrt(n)
     #2, above was used to calculate Standard of error
     e = tval * se
