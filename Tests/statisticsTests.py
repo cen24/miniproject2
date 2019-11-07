@@ -28,7 +28,7 @@ class MyTestCase(unittest.TestCase):
             listx.append(result)
 
         self.statisticss.median_(listx)
-        self.assertEqual(self.statisticss.result, int(result_test))
+        self.assertEqual(round(self.statisticss.result), round(result_test))
 
     def test_mode(self):
         test_data = csvreader('csvdata/Array3.csv').data
@@ -42,6 +42,7 @@ class MyTestCase(unittest.TestCase):
         for row in test_data:
             result = float(row['Array'])
             listx.append(result)
+
 
         self.statisticss.mode_(listx)
         self.assertEqual(self.statisticss.result, result_test)
@@ -62,7 +63,7 @@ class MyTestCase(unittest.TestCase):
 
 
         self.statisticss.mean_(listx)
-        self.assertAlmostEqual(self.statisticss.result, result_test)
+        self.assertEqual(self.statisticss.result, result_test)
 
     def test_stdev(self):
         test_data = csvreader('csvdata/Array3.csv').data
@@ -78,7 +79,7 @@ class MyTestCase(unittest.TestCase):
             listx.append(result)
 
         self.statisticss.stdev_(listx)
-        self.assertEqual(self.statisticss.result, result_test)
+        self.assertEqual(round(self.statisticss.result), round(result_test))
 
     #def test_zscore(self):
         #self.statisticss.zscore_(5, self.statisticss.list)
