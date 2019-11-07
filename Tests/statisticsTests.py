@@ -1,9 +1,12 @@
 import unittest
 
+from CSVreader.csvreader import csvreader
 from Statisticss.statisticss import statisticss
 from Statisticss.extendedstat import extendedstat
 
 class MyTestCase(unittest.TestCase):
+
+
     def setUp(self) -> None:
         self.statisticss = statisticss()
         self.extendedstat = extendedstat()
@@ -20,8 +23,22 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.statisticss.result, 2)
 
     def test_mean(self):
-        self.statisticss.mean_(self.statisticss.list)
-        self.assertEqual(self.statisticss.result, 3)
+        test_data = csvreader('csvdata/Array3.csv').data
+        test_result = csvreader('csvdata/Array3_result.csv').data
+
+        for column in test_result:
+            result_mean = float(column['Mean'])
+
+
+        listx = []
+
+        for row in test_data:
+            result = float(row['Array'])
+            listx.append(result)
+
+
+        self.statisticss.mean_(listx)
+        self.assertAlmostEqual(self.statisticss.result, result_mean)
 
     def test_stdev(self):
         self.statisticss.stdev_(self.statisticss.list)
