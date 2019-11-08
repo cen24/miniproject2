@@ -1,9 +1,12 @@
 import unittest
 
+from CSVreader.csvreader import csvreader
 from Statisticss.statisticss import statisticss
 from Statisticss.extendedstat import extendedstat
 
 class MyTestCase(unittest.TestCase):
+
+
     def setUp(self) -> None:
         self.statisticss = statisticss()
         self.extendedstat = extendedstat()
@@ -12,20 +15,71 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.statisticss, statisticss)
 
     def test_median(self):
-        self.statisticss.median_(self.statisticss.list)
-        self.assertEqual(self.statisticss.result, 3)
+        test_data = csvreader('csvdata/Array3.csv').data
+        test_result = csvreader('csvdata/Array3_result2.csv').data
+
+        for column in test_result:
+            result_test = float(column['Mean'])
+
+        listx = []
+
+        for row in test_data:
+            result = float(row['Array'])
+            listx.append(result)
+
+        self.statisticss.median_(listx)
+        self.assertEqual(round(self.statisticss.result), round(result_test))
 
     def test_mode(self):
-        self.statisticss.mode_(self.statisticss.list_mode)
-        self.assertEqual(self.statisticss.result, 2)
+        test_data = csvreader('csvdata/Array3.csv').data
+        test_result = csvreader('csvdata/Array3_result2.csv').data
+
+        for column in test_result:
+            result_test = float(column['Mode'])
+
+        listx = []
+
+        for row in test_data:
+            result = float(row['Array'])
+            listx.append(result)
+
+
+        self.statisticss.mode_(listx)
+        self.assertEqual(round(self.statisticss.result), round(result_test))
 
     def test_mean(self):
-        self.statisticss.mean_(self.statisticss.list)
-        self.assertEqual(self.statisticss.result, 3)
+        test_data = csvreader('csvdata/Array3.csv').data
+        test_result = csvreader('csvdata/Array3_result2.csv').data
+
+        for column in test_result:
+            result_test = float(column['Mean'])
+
+
+        listx = []
+
+        for row in test_data:
+            result = float(row['Array'])
+            listx.append(result)
+
+
+        self.statisticss.mean_(listx)
+        self.assertEqual(round(self.statisticss.result), round(result_test))
 
     def test_stdev(self):
-        self.statisticss.stdev_(self.statisticss.list)
-        self.assertEqual(self.statisticss.result, 1.5811388300841898)
+        test_data = csvreader('csvdata/Array3.csv').data
+        test_result = csvreader('csvdata/Array3_result2.csv').data
+
+        for column in test_result:
+            result_test = float(column['Stdev'])
+
+        listx = []
+
+        for row in test_data:
+            result = float(row['Array'])
+            listx.append(result)
+
+        self.statisticss.stdev_(listx)
+        self.assertEqual(round(self.statisticss.result), round(result_test))
 
     #def test_zscore(self):
         #self.statisticss.zscore_(5, self.statisticss.list)
