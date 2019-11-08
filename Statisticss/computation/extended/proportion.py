@@ -1,4 +1,7 @@
-def prop(a, b):
+def proportion(a, b):
+    c = a / b
+    return c
+
 #given that Y is directly prop to X
 #e.g y = 20 , x = 4
 # y = kx
@@ -6,6 +9,3 @@ def prop(a, b):
 # y = 20 / 4
 # y = 5x
 # so Y = 5x, where K is the gradient
-    k = a / b
-    return k
-

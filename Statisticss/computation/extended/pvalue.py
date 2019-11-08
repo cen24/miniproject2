@@ -1,6 +1,6 @@
 from Statisticss.computation import mean
 from Statisticss.computation import stdev
-from Statisticss.computation import popvariance
+from Statisticss.computation.extended.populationvar import populationvar
 from Calculator.computation import squareroot as sqrt
 
 
@@ -11,7 +11,7 @@ def pvalue(list):
 
     meanx2 = (meanx - stdevx)
 
-    popx = popvariance
+    popx = populationvar
     popx2 = sqrt(popx)
     n = sqrt(len(list))
 
