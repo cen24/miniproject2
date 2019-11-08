@@ -79,7 +79,7 @@ class MyTestCase(unittest.TestCase):
             listx.append(result)
 
         self.statisticss.stdev_(listx)
-        self.assertEqual(round(self.statisticss.result), round(result_test))
+        self.assertAlmostEqual(round(self.statisticss.result), round(result_test))
 
     #def test_zscore(self):
         #self.statisticss.zscore_(5, self.statisticss.list)

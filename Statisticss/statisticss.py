@@ -14,18 +14,22 @@ class statisticss:
 
     def mean_(self, list):
         self.result = mean(list)
+        print(self.result)
         return self.result
 
     def median_(self, list):
         self.result = median(list)
+        print(self.result)
         return self.result
 
     def mode_(self, list):
         self.result = mode(list)
+        print(self.result)
         return self.result
 
     def stdev_(self, list):
         self.result = stdev(list)
+        print(self.result)
         return self.result
 
 

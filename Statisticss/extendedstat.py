@@ -10,6 +10,7 @@ def count(list):
     list = [1, 1, 1, 2, 3, 4, 5]
     c = len(list)
 
+
     return c
 
 class extendedstat:
