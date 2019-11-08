@@ -1,5 +1,5 @@
 import csv
-from CSVreader.absolutepath import absolutepath
+from FileUtilities.absolutepath import absolutepath
 
 def ClassFactory(class_name, dictionary):
     return type(class_name, (object,), dictionary)

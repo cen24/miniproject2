@@ -10,9 +10,9 @@ def zscore(z, list):
 
 list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
-print(zscore(1.2, list))
-print (stdev(list))
-print (mean(list))
+#print(zscore(1.2, list))
+#print (stdev(list))
+#print (mean(list))
 
 
 

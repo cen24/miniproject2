@@ -2,6 +2,8 @@ def proportion(a, b):
     c = a / b
     return c
 
+
+
 #given that Y is directly prop to X
 #e.g y = 20 , x = 4
 # y = kx
