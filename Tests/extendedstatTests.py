@@ -79,3 +79,21 @@ class MyTestCase(unittest.TestCase):
 
         self.extendedstat.populationvar(listx)
         self.assertEqual(round(self.extendedstat.result), round(result_test))
+
+    def test_samplemean(self):
+
+        test_data = csvreader('csvdata/Array3.csv').data
+        test_result = csvreader('csvdata/Array3_result2.csv').data
+
+        for column in test_result:
+            result_test = float(column['samplemean'])
+
+
+        listx = []
+
+        for row in test_data:
+            result = float(row['Array'])
+            listx.append(result)
+
+        self.extendedstat.samplemean(listx)
+        self.assertEqual(round(self.extendedstat.result), round(result_test))
