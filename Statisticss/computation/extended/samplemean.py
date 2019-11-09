@@ -9,7 +9,6 @@ def split_list(a_list):
 
 
 def samplemean(list):
-
     r = split_list(list)
     c = mean(r)
     return c

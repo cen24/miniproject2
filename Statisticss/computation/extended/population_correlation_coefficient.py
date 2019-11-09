@@ -1,8 +1,7 @@
-from Statisticss.statisticss import statisticss
-import numpy as np
+from Statisticss.computation.extended.samplestdev import samplestdev
 import statistics
 
-
+#0.989743318610787
 
 a = [1,2,3,4,5,6]
 b = [1,2,3,4,5,7]
@@ -13,8 +12,8 @@ def cov(a, b):
     if len(a) != len(b):
         return
 
-    a_mean = np.mean(a)
-    b_mean = np.mean(b)
+    a_mean = statistics.mean(a)
+    b_mean = statistics.mean(b)
 
     sum = 0
 
@@ -26,7 +25,7 @@ def cov(a, b):
 def population_correlation_coefficient(a,b):
 
     x = cov(a,b)
-    y = statistics.stdev(a) * statistics.stdev(b)
+    y = samplestdev(a) * samplestdev(b)
     c = x/y
     return c
 
