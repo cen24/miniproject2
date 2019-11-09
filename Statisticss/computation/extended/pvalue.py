@@ -14,12 +14,13 @@ def pvalue(a, b, c, d):
     z = float(f / math.sqrt(y3))
     norm = d
     pval  = 1 - float(norm)
+
     return pval
 
-a = 80 #this is
-b = 240 #this is Population
-c = 0.27 # this is Hypothesis Population
-d = 0.981856 #this is from a Z table
+# a = 80 #this is
+# b = 240 #this is Population
+# c = 0.27 # this is Hypothesis Population
+# d = 0.981856 #this is from a Z table
 
 #Result ties to what is in the link
 

@@ -130,5 +130,5 @@ class MyTestCase(unittest.TestCase):
 
 
 
-        self.assertEqual(round(self.extendedstat.pvalue_(a,b,c,d)), round(result_test))
+        self.assertEqual(self.extendedstat.pvalue_(a,b,c,d), result_test)
 
