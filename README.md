@@ -26,8 +26,8 @@ See below for calculations that can be performed.
 **For definitions of some of the programming terms used please see link below for their definitions  :** [Additional terms(miniproject2)](https://github.com/rutvik2611/miniproject1/blob/master/Additional%20terms(miniproject2).md)
 
 ### Contributors
-1. **[Chinedu Nnaji](https://github.com/cen24)
-2. **[Rutvik Patel](https://github.com/rutvik2611)
+1. [Chinedu Nnaji](https://github.com/cen24)
+2. [Rutvik Patel](https://github.com/rutvik2611)
 
 ## Reference
 1. https://www.wallstreetmojo.com/p-value-formula/
