@@ -80,6 +80,9 @@ class MyTestCase(unittest.TestCase):
         print(self.statisticss.result)
         self.assertAlmostEqual(round(self.statisticss.result), round(result_test))
 
+
+
+
     def test_results_property(self):
         self.assertEqual(self.statisticss.result, 0)
 

@@ -1,2 +1,2 @@
-Mean,Medain,Mode,Stdev,zscore,zvalue4zscore,samplevar,proportion,populationvar,samplemean
-495.5516129,494,681,296,1979,5,88184,88184,87899,506
+Mean,Medain,Mode,Stdev,zscore,zvalue4zscore,samplevar,proportion,populationvar,samplemean,population_correlation_coefficient
+495.5516129,494,681,296,1979,5,88184,88184,87899,506,0.020322482

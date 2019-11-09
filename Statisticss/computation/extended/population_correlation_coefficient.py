@@ -1,12 +1,6 @@
 from Statisticss.computation.extended.samplestdev import samplestdev
 import statistics
 
-#0.989743318610787
-
-a = [1,2,3,4,5,6]
-b = [1,2,3,4,5,7]
-
-
 def cov(a, b):
 
     if len(a) != len(b):
@@ -28,7 +22,3 @@ def population_correlation_coefficient(a,b):
     y = samplestdev(a) * samplestdev(b)
     c = x/y
     return c
-
-
-z = population_correlation_coefficient(a,b)
-print(z)

@@ -5,6 +5,7 @@ from Statisticss.computation.extended.samplemean import samplemean
 from Statisticss.computation.extended.samplestdev import samplestdev
 from Statisticss.computation.extended.samplevar import samplevar
 from Statisticss.computation.extended.zscore import zscore
+from Statisticss.computation.extended.population_correlation_coefficient import population_correlation_coefficient
 
 
 
@@ -38,11 +39,15 @@ class extendedstat:
         self.result = samplemean(list)
         return self.result
 
+    def population_correlation_coefficient_(self,a,b):
+        self.result = population_correlation_coefficient(a,b)
+        return self.result
+
 
 
 
         # Variance of population proportion
-        # Population Correlation Coefficient
+        # Population Correlation Coefficient(rutvik)
         # Confidence Interval - done Chinedu
         # Population Variance
         # P Value(Rutvik)-done

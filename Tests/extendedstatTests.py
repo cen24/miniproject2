@@ -23,8 +23,8 @@ class MyTestCase(unittest.TestCase):
             result = float(row['Array'])
             listx.append(result)
 
-        self.extendedstat.zscore_(z,listx)
-        self.assertEqual(round(self.extendedstat.result), round(result_test))
+
+        self.assertEqual(round(self.extendedstat.zscore_(z,listx)), round(result_test))
 
     def test_samplevar(self):
 
@@ -41,8 +41,8 @@ class MyTestCase(unittest.TestCase):
             result = float(row['Array'])
             listx.append(result)
 
-        self.extendedstat.samplevar(listx)
-        self.assertEqual(round(self.extendedstat.result), round(result_test))
+
+        self.assertEqual(round(self.extendedstat.samplevar(listx)), round(result_test))
 
     # def test_proportion(self):
     #
@@ -76,8 +76,8 @@ class MyTestCase(unittest.TestCase):
             result = float(row['Array'])
             listx.append(result)
 
-        self.extendedstat.populationvar(listx)
-        self.assertEqual(round(self.extendedstat.result), round(result_test))
+
+        self.assertEqual(round(self.extendedstat.populationvar(listx)), round(result_test))
 
     def test_samplemean(self):
 
@@ -93,5 +93,24 @@ class MyTestCase(unittest.TestCase):
             result = float(row['Array'])
             listx.append(result)
 
-        self.extendedstat.samplemean(listx)
-        self.assertEqual(round(self.extendedstat.result), round(result_test))
+
+        self.assertEqual(round(self.extendedstat.samplemean(listx)), round(result_test))
+
+    def test_population_correlation_coefficient(self):
+        test_data = csvreader('csvdata/Array3.csv').data
+        test_result = csvreader('csvdata/Array3_result2.csv').data
+
+        for column in test_result:
+            result_test = float(column['population_correlation_coefficient'])
+
+        listx = []
+        listy = []
+
+        for row in test_data:
+            result = float(row['Array'])
+            listx.append(result)
+            result2 = float(row['Array2'])
+            listy.append(result2)
+
+        self.assertAlmostEqual(float(self.extendedstat.population_correlation_coefficient_(listx,listy)), float(result_test))
+
