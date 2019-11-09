@@ -46,6 +46,8 @@ class extendedstat:
         self.result = samplemean(list)
         return self.result
 
+
+
         # Variance of population proportion
         # Population Correlation Coefficient
         # Confidence Interval - done Chinedu

@@ -6,8 +6,8 @@ from Calculator.computation import squareroot as sqrt
 
 def pvalue(list):
 
-    meanx = mean
-    stdevx = stdev
+    meanx = mean(list)
+    stdevx = stdev(list)
 
     meanx2 = (meanx - stdevx)
 
@@ -15,9 +15,10 @@ def pvalue(list):
     popx2 = sqrt(popx)
     n = sqrt(len(list))
 
-    popx3 = popx / n
+    #opx3 = popx / n
 
     c = meanx2 / popx2
+    print(c)
 
     return c
 
