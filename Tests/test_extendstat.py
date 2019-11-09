@@ -145,3 +145,21 @@ class MyTestCase(unittest.TestCase):
             listx.append(result)
 
         self.assertEqual(self.extendedstat.samplestdev(listx),result_test)
+
+    def test_Variance_of_population_proportion(self):
+
+        test_data = csvreader('Tests/csvdata/Array3.csv').data
+        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+
+        for column in test_result:
+            result_test = float(column['Variance_of_population_proportion'])
+
+        listx = []
+
+        for row in test_data:
+            result = float(row['Array'])
+            listx.append(result)
+
+        self.assertEqual(self.extendedstat.Variance_of_population_proportion_(listx), result_test)
+
+
