@@ -23,7 +23,7 @@ def cov(a, b):
 
     return sum/(len(a)-1)
 
-def population_correlation_coefficient(list):
+def population_correlation_coefficient(a,b):
 
     x = cov(a,b)
     y = statistics.stdev(a) * statistics.stdev(b)
@@ -31,5 +31,5 @@ def population_correlation_coefficient(list):
     return c
 
 
-z = population_correlation_coefficient(list)
+z = population_correlation_coefficient(a,b)
 print(z)
