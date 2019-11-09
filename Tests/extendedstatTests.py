@@ -128,7 +128,20 @@ class MyTestCase(unittest.TestCase):
             c = float(column['c'])
             d = float(column['d'])
 
-
-
         self.assertEqual(self.extendedstat.pvalue_(a,b,c,d), result_test)
 
+    def test_samplestdev(self):
+
+        test_data = csvreader('csvdata/Array3.csv').data
+        test_result = csvreader('csvdata/Array3_result2.csv').data
+
+        for column in test_result:
+            result_test = float(column['samplestdev'])
+
+        listx = []
+
+        for row in test_data:
+            result = float(row['Array'])
+            listx.append(result)
+
+        self.assertEqual(self.extendedstat.samplestdev(listx),result_test)
