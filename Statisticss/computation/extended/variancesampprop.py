@@ -14,4 +14,4 @@ def variancesampprop(list):
 
 
 
-print("Variance of sample set is % s"%varianceofsampprop(list1))
+print("Variance of sample set is % s"%varianceofsampprop(list))
