@@ -2,7 +2,7 @@
 
 ![Build Status](https://travis-ci.org/cen24/miniproject2.svg?branch=master)
 
-Created a python module to perform statistical calculations. For each calculation we created at least one test to check for the correct value and another test to check for invalid input.  Invalid input would throw an exception with a description of the problem.
+Created a python module to perform statistical calculations. For each calculation we created at least one test to check for the correct value and another test to check for invalid input. Invalid input would throw an exception with a description of the problem.
 
 See below for calculations that can be performed.
 
@@ -12,8 +12,7 @@ See below for calculations that can be performed.
 - [X] Mode
 - [X] Population Standard Deviation
 - [ ] Variance of population proportion
-- [x] Z-Score
-- [x] Standardized score - is it same as z score
+- [x] Z-Score/Standardized Score
 - [X] Population Correlation Coefficient
 - [X] Confidence Interval
 - [x] Population Variance
@@ -27,8 +26,8 @@ See below for calculations that can be performed.
 **For definitions of some of the programming terms used please see link below for their definitions  :** [Additional terms(miniproject2)](https://github.com/rutvik2611/miniproject1/blob/master/Additional%20terms(miniproject2).md)
 
 ### Contributors
-1. Chinedu Nnaji
-2. Rutvik Patel
+1. **[Chinedu Nnaji](https://github.com/cen24)
+2. **[Rutvik Patel](https://github.com/rutvik2611)
 
 ## Reference
 1. https://www.wallstreetmojo.com/p-value-formula/
