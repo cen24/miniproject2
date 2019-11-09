@@ -1,7 +1,7 @@
-from Statisticss.computation.mean import mean
+from Statisticss.computation.populationmean import mean
 from Statisticss.computation.median import median
 from Statisticss.computation.mode import mode
-from Statisticss.computation.stdev import stdev
+from Statisticss.computation.populationstdev import stdev
 
 class statisticss:
     result = 0
