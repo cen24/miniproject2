@@ -19,9 +19,9 @@ def pvalue(a, b, c, d):
 a = 80 #this is
 b = 240 #this is Population
 c = 0.27 # this is Hypothesis Population
-d = .981856 #this is from a Z table
+d = 0.981856 #this is from a Z table
 
-print(pvalue(a, b, c, d)) #Result ties to what is in the link
+#Result ties to what is in the link
 
 #https://www.wallstreetmojo.com/p-value-formula/
 

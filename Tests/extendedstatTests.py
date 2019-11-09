@@ -114,3 +114,21 @@ class MyTestCase(unittest.TestCase):
 
         self.assertAlmostEqual(float(self.extendedstat.population_correlation_coefficient_(listx,listy)), float(result_test))
 
+    def test_samplemean(self):
+
+        test_data = csvreader('csvdata/UnitArgument.csv').data
+        test_result = csvreader('csvdata/Array3_result2.csv').data
+
+        for column in test_result:
+            result_test = float(column['pvalue'])
+
+        for column in test_data:
+            a = float(column['a'])
+            b = float(column['b'])
+            c = float(column['c'])
+            d = float(column['d'])
+
+
+
+        self.assertEqual(round(self.extendedstat.pvalue_(a,b,c,d)), round(result_test))
+
