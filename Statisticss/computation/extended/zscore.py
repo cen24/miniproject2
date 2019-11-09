@@ -14,6 +14,5 @@ def zscore(z, list):
 #where z is the z-score, X is the value of the element,
 #μ is the mean of the population,
 #and σ is the standard deviation. ( Z  and List wouold be a pulled from CSV)
-#https://github.com/hl533/IS601-CalculatorProject/blob/master/References/Standardized_Zscore.md
 
 

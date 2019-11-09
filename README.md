@@ -29,3 +29,8 @@ See below for calculations that can be performed.
 ### Contributors
 1. Chinedu Nnaji
 2. Rutvik Patel
+
+## Reference
+https://docs.python.org/3/library/statistics.html
+https://www.wallstreetmojo.com/p-value-formula/
+http://www.differencebetween.net/science/difference-between-sample-mean-and-population-mean
