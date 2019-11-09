@@ -77,6 +77,7 @@ class MyTestCase(unittest.TestCase):
             listx.append(result)
 
         self.statisticss.stdev_(listx)
+        print(self.statisticss.result)
         self.assertAlmostEqual(round(self.statisticss.result), round(result_test))
 
     def test_results_property(self):
