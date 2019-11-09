@@ -1,19 +1,20 @@
 from Statisticss.statisticss import statisticss
+import numpy as np
+import statistics
 
 
 
-list = [1,2,3,4,5,6]
+a = [1,2,3,4,5,6]
+b = [1,2,3,4,5,7]
 
 
-def cov(list):
-    half = len(list)
+def cov(a, b):
 
-    if len(list[:half]) != len(list[half:]):
+    if len(a) != len(b):
         return
 
-
-    a_mean = statisticss.mean_(list[:half])
-    b_mean = statisticss.mean_(list[half:])
+    a_mean = np.mean(a)
+    b_mean = np.mean(b)
 
     sum = 0
 
@@ -23,12 +24,10 @@ def cov(list):
     return sum/(len(a)-1)
 
 def population_correlation_coefficient(list):
-    half = len(list)
 
-
-    x = cov(list)
-    y = statisticss.stdev_(list[:half]) * statisticss.stdev_(list[half:])
-    c = x / y
+    x = cov(a,b)
+    y = statistics.stdev(a) * statistics.stdev(b)
+    c = x/y
     return c
 
 
