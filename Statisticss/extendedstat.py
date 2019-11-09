@@ -27,6 +27,7 @@ class extendedstat:
         self.result = zscore(z, list)
         return self.result
 
+#unit test left
     def proportion_(self, a, b):
         self.result = proportion(a, b)
         return self.result

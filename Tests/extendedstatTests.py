@@ -58,8 +58,8 @@ class MyTestCase(unittest.TestCase):
     #         result = float(row['Array'])
     #         listx.append(result)
     #
-    #     self.extendedstat.proportion_(5,6)
-    #     self.assertEqual(round(self.extendedstat.result), round(result_test))
+    #
+    #     self.assertEqual(round(self.extendedstat.proportion_(5,6)), round(result_test))
 
     def test_populationvar(self):
 
