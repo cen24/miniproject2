@@ -14,14 +14,14 @@ See below for calculations that can be performed.
 - [ ] Variance of population proportion
 - [x] Z-Score
 - [x] Standardized score - is it same as z score
-- [ ] Population Correlation Coefficient
+- [X] Population Correlation Coefficient
 - [X] Confidence Interval
 - [x] Population Variance
 - [x] Sample Variance
 - [x] P Value
 - [X] Proportion
 - [x] Sample Mean
-- [ ] Sample Standard Deviation
+- [X] Sample Standard Deviation
 - [ ] Variance of sample proportion
 
 **For definitions of some of the programming terms used please see link below for their definitions  :** [Additional terms(miniproject2)](https://github.com/rutvik2611/miniproject1/blob/master/Additional%20terms(miniproject2).md)

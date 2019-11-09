@@ -1,48 +1,29 @@
-from Statisticss.computation import mean
-from Statisticss.computation import stdev
-from Statisticss.computation.extended.populationvar import populationvar
-from Calculator.computation import squareroot as sqrt
-from
-import statistics
 import math
 
-def pvalue(list):
+#z = f / (math.sqrt(p1*(1-p1)/(n))) but does not run correctly so I broke it down.
 
-    meanx = mean(list)
-    stdevx = stdev(list)
+def pvalue(a, b, c, d):
 
-    meanx2 = (meanx - stdevx)
+    p = float(a / b)
+    p1 = float(c)
+    n = float(b)
+    f = float(p - p1)
+    y = float(p1 * (1 - p1))
+    y2 = float(y)
+    y3 = float(y2 / n)
+    z = float(f / math.sqrt(y3))
+    norm = d
+    pval  = 1 - float(norm)
+    return pval
 
-    popx = populationvar
-    popx2 = sqrt(popx)
-    n = sqrt(len(list))
+a = 80 #this is
+b = 240 #this is Population
+c = 0.27 # this is Hypothesis Population
+d = .981856 #this is from a Z table
 
-    #opx3 = popx / n
+print(pvalue(a, b, c, d)) #Result ties to what is in the link
 
-    c = meanx2 / popx2
-    print(c)
-
-    return c
-
-def split_list(a_list):
-    half = len(a_list)//2
-    return a_list[:half]
-
-
-def pval(a, list):
-    p = split_list(list)
-    pO = float(a)
-    f = p - pO
-    n = len(list)
-    z = f / (math.sqrt(pO*(1-pO)/(n)))
-    return z
-
-    p =  80 /240
-    pO = float(.27)
-    f = p - pO
-    n = len(list)
-    z = f / (math.sqrt(pO*(1-pO)/(n)))
-
+#https://www.wallstreetmojo.com/p-value-formula/
 
 
 
