@@ -84,10 +84,14 @@ class MyTestCase(unittest.TestCase):
         test_data = csvreader('csvdata/Array3.csv').data
         test_result = csvreader('csvdata/Array3_result2.csv').data
 
+        for column in test_result:
+            result_test = float(column['samplemean'])
+
+        listx = []
 
         for row in test_data:
-            result_test = test_result(row['samplemean'])
+            result = float(row['Array'])
+            listx.append(result)
 
-            self.extendedstat.samplemean(row['Values'])
-            self.assertEqual(round(self.extendedstat.result), round(result_test))
-
+        self.extendedstat.samplemean(listx)
+        self.assertEqual(round(self.extendedstat.result), round(result_test))
