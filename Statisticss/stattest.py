@@ -12,3 +12,4 @@ class stattest(calculator):
         self.data = mean(list)
         return self.data
 
+#to be deleted
