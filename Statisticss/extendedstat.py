@@ -7,7 +7,7 @@ from Statisticss.computation.extended.zscore import zscore
 from Statisticss.computation.extended.population_correlation_coefficient import population_correlation_coefficient
 from Statisticss.computation.extended.pvalue import pvalue
 from Statisticss.computation.extended.Variance_of_population_proportion import Variance_of_population_proportion
-
+from Statisticss.computation.extended.Variance_of_sample_proportion import Variance_of_sample_proportion
 
 class extendedstat:
     result = []
@@ -49,6 +49,10 @@ class extendedstat:
 
     def Variance_of_population_proportion_(self, list):
         self.result = Variance_of_population_proportion(list)
+        return self.result
+
+    def Variance_of_sample_proportion(self,list):
+        self.result = Variance_of_sample_proportion(list)
         return self.result
 
 # Variance of population proportion
