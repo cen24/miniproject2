@@ -4,7 +4,6 @@ from CSVreader.csvreader import csvreader
 from Statisticss.extendedstat import extendedstat
 
 class MyTestCase(unittest.TestCase):
-
     def setUp(self) -> None:
         self.extendedstat = extendedstat()
 

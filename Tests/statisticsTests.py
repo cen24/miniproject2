@@ -2,14 +2,12 @@ import unittest
 
 from CSVreader.csvreader import csvreader
 from Statisticss.statisticss import statisticss
-from Statisticss.extendedstat import extendedstat
+
+
 
 class MyTestCase(unittest.TestCase):
-
-
     def setUp(self) -> None:
         self.statisticss = statisticss()
-        self.extendedstat = extendedstat()
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statisticss, statisticss)
@@ -80,14 +78,6 @@ class MyTestCase(unittest.TestCase):
 
         self.statisticss.stdev_(listx)
         self.assertAlmostEqual(round(self.statisticss.result), round(result_test))
-
-    #def test_zscore(self):
-        #self.statisticss.zscore_(5, self.statisticss.list)
-        #self.assertEqual(self.statisticss.result, 1.2649110640673518)
-
-    # def test_prop(self):
-    #     self.extendedstat.proportion(20, 4)
-    #     self.assertAlmostEqual(self.statisticss.result, 5)
 
     def test_results_property(self):
         self.assertEqual(self.statisticss.result, 0)
