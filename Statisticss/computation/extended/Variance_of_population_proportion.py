@@ -1,0 +1,1 @@
+#Variance of population proportion = σP2 = PQ / n
