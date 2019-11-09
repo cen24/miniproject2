@@ -5,19 +5,9 @@ from Statisticss.computation.extended.samplemean import samplemean
 from Statisticss.computation.extended.samplestdev import samplestdev
 from Statisticss.computation.extended.samplevar import samplevar
 from Statisticss.computation.extended.zscore import zscore
+from Statisticss.computation.extended.variancesampprop import variancesampprop
+from Statisticss.computation.extended.variancesampprop import varianceofpopprop
 
-def count(list):
-    list = [1, 1, 1, 2, 3, 4, 5]
-    c = len(list)
-
-
-    return c
-
-class extendedstat:
-    result = 0
-
-    list = [1, 2, 3, 4, 5]
-    list_mode = [1, 2, 3, 4, 2]
 
     def __init__(self):
         pass
@@ -46,25 +36,17 @@ class extendedstat:
         self.result = samplemean(list)
         return self.result
 
+    def variancesamprop_(self, list):
+        self.result = variancesampprop(list)
+        return self.result
+
+    def variancesamprop_(self, list):
+        self.result = variancepoppprop(list)
+        return self.result
 
 
-        # Variance of population proportion
+
+
         # Population Correlation Coefficient
         # Confidence Interval - done Chinedu
-        # Population Variance
         # P Value(Rutvik)-done
-        # Proportion(Rutvik) - done chinedu
-        # Sample Mean(Rutvik)-done
-        # Sample Standard Deviation(Rutvik)
-        # Variance of sample proportion
-
-
-
-#Variance of population proportion
-#Population Correlation Coefficient
-#Confidence Interval
-#P Value
-#Proportion
-#Sample Mean
-#Sample Standard Deviation
-#Variance of sample proportion
