@@ -1,6 +1,5 @@
-FROM python:3
+FROM python:3.7
 
-ADD src /src
+ADD . .
 
-
-CMD [ "python", "./src/calculatorTests.py" ]
+CMD ["python", "-m", "unittest", "discover", "-s","Tests"]

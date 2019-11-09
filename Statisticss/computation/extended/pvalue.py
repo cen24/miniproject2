@@ -1,7 +1,5 @@
 import math
 
-#z = f / (math.sqrt(p1*(1-p1)/(n))) but does not run correctly so I broke it down.
-
 def pvalue(a, b, c, d):
 
     p = float(a / b)
@@ -21,7 +19,7 @@ def pvalue(a, b, c, d):
 # b = 240 #this is Population
 # c = 0.27 # this is Hypothesis Population
 # d = 0.981856 #this is from a Z table
-
+#z = f / (math.sqrt(p1*(1-p1)/(n))) but does not run correctly so I broke it down.
 #Result ties to what is in the link
 
 #https://www.wallstreetmojo.com/p-value-formula/

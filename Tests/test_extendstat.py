@@ -10,8 +10,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_zscore(self):
 
-        test_data = csvreader('csvdata/Array3.csv').data
-        test_result = csvreader('csvdata/Array3_result2.csv').data
+        test_data = csvreader('Tests/csvdata/Array3.csv').data
+        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
         for column in test_result:
             result_test = float(column['zscore'])
@@ -28,8 +28,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_samplevar(self):
 
-        test_data = csvreader('csvdata/Array3.csv').data
-        test_result = csvreader('csvdata/Array3_result2.csv').data
+        test_data = csvreader('Tests/csvdata/Array3.csv').data
+        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
         for column in test_result:
             result_test = float(column['samplevar'])
@@ -63,8 +63,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_populationvar(self):
 
-        test_data = csvreader('csvdata/Array3.csv').data
-        test_result = csvreader('csvdata/Array3_result2.csv').data
+        test_data = csvreader('Tests/csvdata/Array3.csv').data
+        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
         for column in test_result:
             result_test = float(column['populationvar'])
@@ -81,8 +81,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_samplemean(self):
 
-        test_data = csvreader('csvdata/Array3.csv').data
-        test_result = csvreader('csvdata/Array3_result2.csv').data
+        test_data = csvreader('Tests/csvdata/Array3.csv').data
+        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
         for column in test_result:
             result_test = float(column['samplemean'])
@@ -97,8 +97,8 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(round(self.extendedstat.samplemean(listx)), round(result_test))
 
     def test_population_correlation_coefficient(self):
-        test_data = csvreader('csvdata/Array3.csv').data
-        test_result = csvreader('csvdata/Array3_result2.csv').data
+        test_data = csvreader('Tests/csvdata/Array3.csv').data
+        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
         for column in test_result:
             result_test = float(column['population_correlation_coefficient'])
@@ -116,8 +116,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_pvalue(self):
 
-        test_data = csvreader('csvdata/UnitArgument.csv').data
-        test_result = csvreader('csvdata/Array3_result2.csv').data
+        test_data = csvreader('Tests/csvdata/UnitArgument.csv').data
+        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
         for column in test_result:
             result_test = float(column['pvalue'])

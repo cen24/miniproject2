@@ -5,5 +5,14 @@ python:
 
 services: docker
 
+install:
+  - pip install -r requirements.txt
+
+#command to run test
 script :
-  - python ../src/calculatorTest.py
+  - python -m  unittest discover -s Tests
+
+branches:
+  only:
+   - master
+   - development
