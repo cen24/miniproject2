@@ -114,7 +114,7 @@ class MyTestCase(unittest.TestCase):
 
         self.assertAlmostEqual(float(self.extendedstat.population_correlation_coefficient_(listx,listy)), float(result_test))
 
-    def test_samplemean(self):
+    def test_pvalue(self):
 
         test_data = csvreader('csvdata/UnitArgument.csv').data
         test_result = csvreader('csvdata/Array3_result2.csv').data
