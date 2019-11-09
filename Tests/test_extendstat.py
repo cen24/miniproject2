@@ -132,8 +132,8 @@ class MyTestCase(unittest.TestCase):
 
     def test_samplestdev(self):
 
-        test_data = csvreader('csvdata/Array3.csv').data
-        test_result = csvreader('csvdata/Array3_result2.csv').data
+        test_data = csvreader('Tests/csvdata/Array3.csv').data
+        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
         for column in test_result:
             result_test = float(column['samplestdev'])
