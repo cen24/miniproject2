@@ -5,7 +5,7 @@ from CSVreader.csvreader import csvreader, ClassFactory
 class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.csv_reader = csvreader('Tests/csvdata/student_info.csv')
+        self.csv_reader = csvreader('Tests/csvdata/UnitTestStudentInfo.csv')
 
     def test_return_data_as_objects(self):
         people = self.csv_reader.return_data_as_objects('name')
