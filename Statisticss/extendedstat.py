@@ -27,7 +27,6 @@ class extendedstat:
         self.result = zscore(z, list)
         return self.result
 
-#unit test left
     def proportion_(self, a, b):
         self.result = proportion(a, b)
         return self.result
@@ -48,13 +47,5 @@ class extendedstat:
         self.result = pvalue(a, b, c, d)
         return self.result
 
-
-        # Variance of population proportion
-        # Population Correlation Coefficient(rutvik)
-        # Confidence Interval - done Chinedu
-        # Population Variance
-        # P Value(Rutvik)-done
-        # Proportion(Rutvik) - done chinedu
-        # Sample Mean(Rutvik)-done
-        # Sample Standard Deviation(Rutvik)
-        # Variance of sample proportion
+# Variance of population proportion
+# Variance of sample proportion
