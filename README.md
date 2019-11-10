@@ -26,7 +26,7 @@ See below for calculations that can be performed.
 **For definitions of some of the programming terms used please see link below for their definitions  :** [Additional terms(miniproject2)](https://github.com/rutvik2611/miniproject1/blob/master/Additional%20terms(miniproject2).md)
 
 ### Contributors
-1. [Chinedu Nnaji](https://github.com/cen24)
+1. [Chinedu Nnaji](https://www.linkedin.com/in/chinedunnaji/)
 2. [Rutvik Patel](https://github.com/rutvik2611)
 
 ## Reference
