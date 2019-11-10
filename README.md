@@ -36,7 +36,7 @@ See below for calculations that can be performed.
 
 3. https://docs.python.org/3/library/statistics.html
 
-### Change log:
+### Change log
 See link for complete log: [Log.csv](./log.csv)
 
 |Commit   |User |Date/Time            |Change                                                                                                                          |
