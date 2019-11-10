@@ -1,5 +1,7 @@
 import statistics
+from Statisticss.computation.extended.split_list  import split_list
 
 def samplestdev(list):
-    c = statistics.stdev(list, xbar = None)
+    r = split_list(list)
+    c = statistics.stdev(r, xbar = None)
     return c

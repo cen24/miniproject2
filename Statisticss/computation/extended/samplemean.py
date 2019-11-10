@@ -1,10 +1,7 @@
 from Statisticss.computation.populationmean import mean
+from Statisticss.computation.extended.split_list  import split_list
 
 
-
-def split_list(a_list):
-    half = len(a_list)//2
-    return a_list[:half]
 
 
 
