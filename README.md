@@ -11,7 +11,7 @@ See below for calculations that can be performed.
 - [X] Median
 - [X] Mode
 - [X] Population Standard Deviation
-- [ ] Variance of population proportion
+- [X] Variance of population proportion
 - [x] Z-Score/Standardized Score
 - [X] Population Correlation Coefficient
 - [X] Confidence Interval
@@ -21,7 +21,7 @@ See below for calculations that can be performed.
 - [X] Proportion
 - [x] Sample Mean
 - [X] Sample Standard Deviation
-- [ ] Variance of sample proportion
+- [X] Variance of sample proportion
 
 **For definitions of some of the programming terms used please see link below for their definitions  :** [Additional terms(miniproject2)](https://github.com/rutvik2611/miniproject1/blob/master/Additional%20terms(miniproject2).md)
 
