@@ -176,8 +176,6 @@ class MyTestCase(unittest.TestCase):
             result = float(row['Array'])
             listx.append(result)
 
-
-
         self.assertAlmostEqual(self.extendedstat.Variance_of_sample_proportion(listx), result_test)
 
 
