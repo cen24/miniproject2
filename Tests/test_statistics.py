@@ -17,7 +17,7 @@ class MyTestCase(unittest.TestCase):
         test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
         for column in test_result:
-            result_test = float(column['Mean'])
+            result_test = float(column['Medain'])
 
         listx = []
 

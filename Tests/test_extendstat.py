@@ -1,7 +1,7 @@
 import unittest
-
 from CSVreader.csvreader import csvreader
 from Statisticss.extendedstat import extendedstat
+
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
@@ -128,7 +128,7 @@ class MyTestCase(unittest.TestCase):
             c = float(column['c'])
             d = float(column['d'])
 
-        self.assertEqual(self.extendedstat.pvalue_(a,b,c,d), result_test)
+        self.assertAlmostEqual(self.extendedstat.pvalue_(a,b,c,d), result_test)
 
     def test_samplestdev(self):
 
@@ -144,7 +144,7 @@ class MyTestCase(unittest.TestCase):
             result = float(row['Array'])
             listx.append(result)
 
-        self.assertEqual(self.extendedstat.samplestdev(listx),result_test)
+        self.assertAlmostEqual(self.extendedstat.samplestdev(listx),result_test)
 
     def test_Variance_of_population_proportion(self):
 
@@ -160,7 +160,7 @@ class MyTestCase(unittest.TestCase):
             result = float(row['Array'])
             listx.append(result)
 
-        self.assertEqual(self.extendedstat.Variance_of_population_proportion_(listx), result_test)
+        self.assertAlmostEqual(self.extendedstat.Variance_of_population_proportion_(listx), result_test)
 
     def test_Variance_of_sample_proportion(self):
 
@@ -176,7 +176,9 @@ class MyTestCase(unittest.TestCase):
             result = float(row['Array'])
             listx.append(result)
 
-        self.assertEqual(self.extendedstat.Variance_of_sample_proportion(listx), result_test)
+
+
+        self.assertAlmostEqual(self.extendedstat.Variance_of_sample_proportion(listx), result_test)
 
 
 
