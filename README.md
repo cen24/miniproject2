@@ -6,7 +6,7 @@ Created a python module to perform statistical calculations. For each calculatio
 
 See below for calculations that can be performed.
 
-## **Program calculates the following:**
+### **Program calculates the following:**
 - [X] Population Mean
 - [X] Median
 - [X] Mode
@@ -29,9 +29,22 @@ See below for calculations that can be performed.
 1. [Chinedu Nnaji](https://www.linkedin.com/in/chinedunnaji/)
 2. [Rutvik Patel](https://github.com/rutvik2611)
 
-## Reference
+### Reference
 1. https://www.wallstreetmojo.com/p-value-formula/
 
 2. http://www.differencebetween.net/science/difference-between-sample-mean-and-population-mean
 
 3. https://docs.python.org/3/library/statistics.html
+
+### Change log:
+See link for complete log: [Log.csv](./log.csv)
+
+|Commit   |User |Date/Time            |Change                                                                                                                          |
+|-------|-----|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
+6daa95b|rutvik2611|Sun Nov 10 16:06:07 2019 -0500|Fix:Use split function for Varaince of sample proportion
+2ee55fb|rutvik2611|Sun Nov 10 16:04:37 2019 -0500|Fix:Use split function for sample mean and sample stdev
+aaa48eb|rutvik2611|Sun Nov 10 16:04:08 2019 -0500|Fix:Update Result and test case
+e8e10a7|rutvik2611|Sun Nov 10 16:03:37 2019 -0500|Feature:Made a splut list function for sample
+7d08b37|ChineduN|Sun Nov 10 01:24:53 2019 -0500|fix : read me
+74a383c|Chinedu Nnaji|Sun Nov 10 01:23:24 2019 -0500|fix : read me and deleted vpop and samppop
+01054bf|rutvik2611|Sat Nov 9 20:46:24 2019 -0500|Fix:Median Test
