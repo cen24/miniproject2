@@ -1,210 +1,217 @@
-import unittest
-from CSVreader.csvreader import csvreader
-from Statisticss.extendedstat import extendedstat
+try:
+    import unittest
+    from CSVreader.csvreader import csvreader
+    from Statisticss.extendedstat import extendedstat
 
 
-class MyTestCase(unittest.TestCase):
+    class MyTestCase(unittest.TestCase):
 
 
-    def setUp(self) -> None:
-        self.extendedstat = extendedstat()
+        def setUp(self) -> None:
+            self.extendedstat = extendedstat()
 
 
-    def test_zscore(self):
+        def test_zscore(self):
+
+                test_data = csvreader('Tests/csvdata/Array3.csv').data
+                test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+
+                for column in test_result:
+                    result_test = float(column['zscore'])
+                    z = float(column['zvalue4zscore'])
+
+                listx = []
+
+
+                for row in test_data:
+                    result = float(row['Array'])
+                    listx.append(result)
+
+
+                self.assertEqual(round(self.extendedstat.zscore_(z,listx)), round(result_test))
+
+
+        def test_samplevar(self):
 
             test_data = csvreader('Tests/csvdata/Array3.csv').data
             test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
             for column in test_result:
-                result_test = float(column['zscore'])
-                z = float(column['zvalue4zscore'])
+                result_test = float(column['samplevar'])
+
 
             listx = []
-
 
             for row in test_data:
                 result = float(row['Array'])
                 listx.append(result)
 
 
-            self.assertEqual(round(self.extendedstat.zscore_(z,listx)), round(result_test))
+            self.assertEqual(round(self.extendedstat.samplevar(listx)), round(result_test))
 
+        def test_proportion(self):
 
-    def test_samplevar(self):
+            test_data = csvreader('Tests/csvdata/Array3.csv').data
+            test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
-        test_data = csvreader('Tests/csvdata/Array3.csv').data
-        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+            for column in test_result:
+                result_test = float(column['proportion'])
 
-        for column in test_result:
-            result_test = float(column['samplevar'])
+            listx = []
 
+            for row in test_data:
+                result = float(row['Array'])
+                listx.append(result)
 
-        listx = []
 
-        for row in test_data:
-            result = float(row['Array'])
-            listx.append(result)
+            self.assertEqual(round(self.extendedstat.proportion_(listx)), round(result_test))
 
+        def test_populationvar(self):
 
-        self.assertEqual(round(self.extendedstat.samplevar(listx)), round(result_test))
+            test_data = csvreader('Tests/csvdata/Array3.csv').data
+            test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
-    def test_proportion(self):
+            for column in test_result:
+                result_test = float(column['populationvar'])
 
-        test_data = csvreader('Tests/csvdata/Array3.csv').data
-        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
-        for column in test_result:
-            result_test = float(column['proportion'])
+            listx = []
 
-        listx = []
+            for row in test_data:
+                result = float(row['Array'])
+                listx.append(result)
 
-        for row in test_data:
-            result = float(row['Array'])
-            listx.append(result)
 
+            self.assertEqual(round(self.extendedstat.populationvar(listx)), round(result_test))
 
-        self.assertEqual(round(self.extendedstat.proportion_(listx)), round(result_test))
+        def test_samplemean(self):
 
-    def test_populationvar(self):
+            test_data = csvreader('Tests/csvdata/Array3.csv').data
+            test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
-        test_data = csvreader('Tests/csvdata/Array3.csv').data
-        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+            for column in test_result:
+                result_test = float(column['samplemean'])
 
-        for column in test_result:
-            result_test = float(column['populationvar'])
+            listx = []
 
+            for row in test_data:
+                result = float(row['Array'])
+                listx.append(result)
 
-        listx = []
 
-        for row in test_data:
-            result = float(row['Array'])
-            listx.append(result)
+            self.assertEqual(round(self.extendedstat.samplemean(listx)), round(result_test))
 
+        def test_population_correlation_coefficient(self):
+            test_data = csvreader('Tests/csvdata/Array3.csv').data
+            test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
-        self.assertEqual(round(self.extendedstat.populationvar(listx)), round(result_test))
+            for column in test_result:
+                result_test = float(column['population_correlation_coefficient'])
 
-    def test_samplemean(self):
+            listx = []
+            listy = []
 
-        test_data = csvreader('Tests/csvdata/Array3.csv').data
-        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+            for row in test_data:
+                result = float(row['Array'])
+                listx.append(result)
+                result2 = float(row['Array2'])
+                listy.append(result2)
 
-        for column in test_result:
-            result_test = float(column['samplemean'])
+            self.assertAlmostEqual(float(self.extendedstat.population_correlation_coefficient_(listx,listy)), float(result_test))
 
-        listx = []
+        def test_pvalue(self):
 
-        for row in test_data:
-            result = float(row['Array'])
-            listx.append(result)
+            test_data = csvreader('Tests/csvdata/UnitArgument.csv').data
+            test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
+            for column in test_result:
+                result_test = float(column['pvalue'])
 
-        self.assertEqual(round(self.extendedstat.samplemean(listx)), round(result_test))
+            for column in test_data:
+                a = float(column['a'])
+                b = float(column['b'])
+                c = float(column['c'])
+                d = float(column['d'])
 
-    def test_population_correlation_coefficient(self):
-        test_data = csvreader('Tests/csvdata/Array3.csv').data
-        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+            self.assertAlmostEqual(self.extendedstat.pvalue_(a,b,c,d), result_test)
 
-        for column in test_result:
-            result_test = float(column['population_correlation_coefficient'])
+        def test_samplestdev(self):
 
-        listx = []
-        listy = []
+            test_data = csvreader('Tests/csvdata/Array3.csv').data
+            test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
-        for row in test_data:
-            result = float(row['Array'])
-            listx.append(result)
-            result2 = float(row['Array2'])
-            listy.append(result2)
+            for column in test_result:
+                result_test = float(column['samplestdev'])
 
-        self.assertAlmostEqual(float(self.extendedstat.population_correlation_coefficient_(listx,listy)), float(result_test))
+            listx = []
 
-    def test_pvalue(self):
+            for row in test_data:
+                result = float(row['Array'])
+                listx.append(result)
 
-        test_data = csvreader('Tests/csvdata/UnitArgument.csv').data
-        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+            self.assertAlmostEqual(self.extendedstat.samplestdev(listx),result_test)
 
-        for column in test_result:
-            result_test = float(column['pvalue'])
+        def test_Variance_of_population_proportion(self):
 
-        for column in test_data:
-            a = float(column['a'])
-            b = float(column['b'])
-            c = float(column['c'])
-            d = float(column['d'])
+            test_data = csvreader('Tests/csvdata/Array3.csv').data
+            test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
-        self.assertAlmostEqual(self.extendedstat.pvalue_(a,b,c,d), result_test)
+            for column in test_result:
+                result_test = float(column['Variance_of_population_proportion'])
 
-    def test_samplestdev(self):
+            listx = []
 
-        test_data = csvreader('Tests/csvdata/Array3.csv').data
-        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+            for row in test_data:
+                result = float(row['Array'])
+                listx.append(result)
 
-        for column in test_result:
-            result_test = float(column['samplestdev'])
+            self.assertAlmostEqual(self.extendedstat.Variance_of_population_proportion_(listx), result_test)
 
-        listx = []
+        def test_Variance_of_sample_proportion(self):
 
-        for row in test_data:
-            result = float(row['Array'])
-            listx.append(result)
+            test_data = csvreader('Tests/csvdata/Array3.csv').data
+            test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
-        self.assertAlmostEqual(self.extendedstat.samplestdev(listx),result_test)
+            for column in test_result:
+                result_test = float(column['Variance_of_sample_proportion'])
 
-    def test_Variance_of_population_proportion(self):
+            listx = []
 
-        test_data = csvreader('Tests/csvdata/Array3.csv').data
-        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+            for row in test_data:
+                result = float(row['Array'])
+                listx.append(result)
 
-        for column in test_result:
-            result_test = float(column['Variance_of_population_proportion'])
+            self.assertAlmostEqual(self.extendedstat.Variance_of_sample_proportion(listx), result_test)
 
-        listx = []
+        def test_cinterval(self):
 
-        for row in test_data:
-            result = float(row['Array'])
-            listx.append(result)
+            test_data = csvreader('Tests/csvdata/Array3.csv').data
+            test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
-        self.assertAlmostEqual(self.extendedstat.Variance_of_population_proportion_(listx), result_test)
+            for column in test_result:
+                result_test1 = float(column['cintreval1'])
+                result_test2 = float(column['cintreval2'])
 
-    def test_Variance_of_sample_proportion(self):
+            listx = x = []
 
-        test_data = csvreader('Tests/csvdata/Array3.csv').data
-        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+            for row in test_data:
+                result = float(row['Array'])
+                listx.append(result)
+            x = self.extendedstat.cintreval_(listx)
 
-        for column in test_result:
-            result_test = float(column['Variance_of_sample_proportion'])
+            try:
+                self.assertAlmostEqual(x[0], result_test1)
+                self.assertAlmostEqual(x[1], result_test2)
+            except AssertionError as e:
+                print("Cintreval has AsserstionError:", e)
+                assert 0
 
-        listx = []
-
-        for row in test_data:
-            result = float(row['Array'])
-            listx.append(result)
-
-        self.assertAlmostEqual(self.extendedstat.Variance_of_sample_proportion(listx), result_test)
-
-    def test_cinterval(self):
-
-        test_data = csvreader('Tests/csvdata/Array3.csv').data
-        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
-
-        for column in test_result:
-            result_test1 = float(column['cintreval1'])
-            result_test2 = float(column['cintreval2'])
-
-        listx = x = []
-
-        for row in test_data:
-            result = float(row['Array'])
-            listx.append(result)
-        x = self.extendedstat.cintreval_(listx)
-        try:
-            self.assertAlmostEqual(x[0], result_test1)
-            self.assertAlmostEqual(x[1], result_test2)
-        except AssertionError:
-            print("Asserstion Error in Cinterval")
-
-
-
-
-
+except IndentationError as e :
+    print("Indentation Error in Extended Stat:", e)
+except ImportError as e :
+    print("Import Error in Extended Stat:", e)
+except Exception as e :
+    print("Any Other Kind of Exception:", e)
+except AttributeError as e :
+    print("Attribute Error", e)
 
