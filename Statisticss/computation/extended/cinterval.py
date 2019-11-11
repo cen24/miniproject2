@@ -10,7 +10,7 @@ def cintreval(list):
     stdev_var = stdev(list)
     n = sqrt(len(list))
     result = [mean_var - value_of_z*stdev_var / n, mean_var + value_of_z*stdev_var / n]
-    print(result)
+
     return result
 
 
