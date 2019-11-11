@@ -10,12 +10,17 @@ class csvreader:
 
     def __init__(self, filepath):
         self.data = []
+        try:
 
-        with open(absolutepath(filepath)) as text_data:
-            csv_data = csv.DictReader(text_data, delimiter=',')
-            for row in csv_data:
-                self.data.append(row)
-        pass
+
+            with open(absolutepath(filepath)) as text_data:
+                csv_data = csv.DictReader(text_data, delimiter=',')
+                for row in csv_data:
+                    self.data.append(row)
+                pass
+        except FileNotFoundError:
+            print("FROM EXCEPTION FileNotFoundError : Wrong file or file path")
+
 
     def return_data_as_objects(self, class_name):
         objects = []
