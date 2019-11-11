@@ -19,6 +19,7 @@ class MyTestCase(unittest.TestCase):
 
         listx = []
 
+
         for row in test_data:
             result = float(row['Array'])
             listx.append(result)
@@ -177,6 +178,25 @@ class MyTestCase(unittest.TestCase):
             listx.append(result)
 
         self.assertAlmostEqual(self.extendedstat.Variance_of_sample_proportion(listx), result_test)
+
+    def test_cinterval(self):
+
+        test_data = csvreader('Tests/csvdata/Array3.csv').data
+        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+
+        for column in test_result:
+            result_test1 = float(column['cintreval1'])
+            result_test2 = float(column['cintreval2'])
+
+        listx = x = []
+
+        for row in test_data:
+            result = float(row['Array'])
+            listx.append(result)
+        x = self.extendedstat.cintreval_(listx)
+        self.assertAlmostEqual(x[0], result_test1)
+        self.assertAlmostEqual(x[1], result_test2)
+
 
 
 
