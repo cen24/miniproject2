@@ -1,5 +1,8 @@
 import statistics
 
 def median(list):
-    c = statistics.median(list)
-    return c
+    try:
+        c = statistics.median(list)
+        return c
+    except statistics.StatisticsError as e:
+        print("Median error: ", e)

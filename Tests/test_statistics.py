@@ -42,7 +42,7 @@ class MyTestCase(unittest.TestCase):
             listx.append(result)
 
         self.statisticss.mode_(listx)
-        #self.assertEqual(round(self.statisticss.result), round(result_test))
+        self.assertEqual(round(self.statisticss.result), round(result_test))
 
     def test_mean(self):
         test_data = csvreader('Tests/csvdata/Array3.csv').data
