@@ -8,6 +8,7 @@ from Statisticss.computation.extended.population_correlation_coefficient import 
 from Statisticss.computation.extended.pvalue import pvalue
 from Statisticss.computation.extended.Variance_of_population_proportion import Variance_of_population_proportion
 from Statisticss.computation.extended.Variance_of_sample_proportion import Variance_of_sample_proportion
+from Statisticss.computation.extended.cinterval import cintreval
 
 class extendedstat:
     result = []
@@ -55,5 +56,8 @@ class extendedstat:
         self.result = Variance_of_sample_proportion(list)
         return self.result
 
+    def cintreval_(self, list):
+        self.result = cintreval(list)
+        return self.result
 # Variance of population proportion
 # Variance of sample proportion
