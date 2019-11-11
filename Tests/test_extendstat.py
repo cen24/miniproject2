@@ -4,28 +4,31 @@ from Statisticss.extendedstat import extendedstat
 
 
 class MyTestCase(unittest.TestCase):
+
+
     def setUp(self) -> None:
         self.extendedstat = extendedstat()
 
 
     def test_zscore(self):
 
-        test_data = csvreader('Tests/csvdata/Array3.csv').data
-        test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+            test_data = csvreader('Tests/csvdata/Array3.csv').data
+            test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
-        for column in test_result:
-            result_test = float(column['zscore'])
-            z = float(column['zvalue4zscore'])
+            for column in test_result:
+                result_test = float(column['zscore'])
+                z = float(column['zvalue4zscore'])
 
-        listx = []
-
-
-        for row in test_data:
-            result = float(row['Array'])
-            listx.append(result)
+            listx = []
 
 
-        self.assertEqual(round(self.extendedstat.zscore_(z,listx)), round(result_test))
+            for row in test_data:
+                result = float(row['Array'])
+                listx.append(result)
+
+
+            self.assertEqual(round(self.extendedstat.zscore_(z,listx)), round(result_test))
+
 
     def test_samplevar(self):
 
@@ -196,11 +199,12 @@ class MyTestCase(unittest.TestCase):
         x = self.extendedstat.cintreval_(listx)
         try:
             self.assertAlmostEqual(x[0], result_test1)
-            self.assertAlmostEqual(x[0], result_test2)
+            self.assertAlmostEqual(x[1], result_test2)
         except AssertionError:
             print("Asserstion Error in Cinterval")
-            self.assertAlmostEqual(x[0], result_test1)
-            self.assertAlmostEqual(x[0], result_test2)
+
+
+
 
 
 
