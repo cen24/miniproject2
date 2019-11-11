@@ -1,13 +1,13 @@
-from Statisticss.computation.extended.samplestdev import samplestdev
-import statistics
+from Statisticss.computation.populationstdev import stdev
+from Statisticss.computation.populationmean import mean
 
 def cov(a, b):
 
     if len(a) != len(b):
         return
 
-    a_mean = statistics.mean(a)
-    b_mean = statistics.mean(b)
+    a_mean = mean(a)
+    b_mean = mean(b)
 
     sum = 0
 
@@ -19,6 +19,6 @@ def cov(a, b):
 def population_correlation_coefficient(a,b):
 
     x = cov(a,b)
-    y = samplestdev(a) * samplestdev(b)
+    y = stdev(a) * stdev(b)
     c = x/y
     return c

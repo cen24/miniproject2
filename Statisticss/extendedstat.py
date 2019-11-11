@@ -27,8 +27,8 @@ class extendedstat:
         self.result = zscore(z, list)
         return self.result
 
-    def proportion_(self, a, b):
-        self.result = proportion(a, b)
+    def proportion_(self, list):
+        self.result = proportion(list)
         return self.result
 
     def samplestdev(self, list):
