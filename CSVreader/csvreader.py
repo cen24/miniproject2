@@ -18,8 +18,9 @@ class csvreader:
                 for row in csv_data:
                     self.data.append(row)
                 pass
-        except FileNotFoundError:
-            print("FROM EXCEPTION FileNotFoundError : Wrong file or file path")
+        except FileNotFoundError as e:
+            print("EXCEPTION Occured FileNotFoundError : Wrong file or file path -->",e)
+            assert 0
 
 
     def return_data_as_objects(self, class_name):
