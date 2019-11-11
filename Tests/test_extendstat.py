@@ -196,9 +196,11 @@ class MyTestCase(unittest.TestCase):
         x = self.extendedstat.cintreval_(listx)
         try:
             self.assertAlmostEqual(x[0], result_test1)
-            self.assertAlmostEqual(x[1], result_test2)
+            self.assertAlmostEqual(x[0], result_test2)
         except AssertionError:
-            print("Asserstion Error")
+            print("Asserstion Error in Cinterval")
+            self.assertAlmostEqual(x[0], result_test1)
+            self.assertAlmostEqual(x[0], result_test2)
 
 
 
