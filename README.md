@@ -26,8 +26,8 @@ See below for calculations that can be performed.
 **For definitions of some of the programming terms used please see link below for their definitions  :** [Additional terms(miniproject2)](https://github.com/rutvik2611/miniproject1/blob/master/Additional%20terms(miniproject2).md)
 
 ### Contributors
-1. [Chinedu Nnaji](https://www.linkedin.com/in/chinedunnaji/)
-2. [Rutvik Patel](https://github.com/rutvik2611)
+1. [Chinedu Nnaji](https://www.linkedin.com/in/chinedunnaji/), Cen24 (UCID)
+2. [Rutvik Patel](https://github.com/rutvik26110), RP883 (UCID)
 
 ### Reference
 1. https://www.wallstreetmojo.com/p-value-formula/
@@ -39,7 +39,7 @@ See below for calculations that can be performed.
 ### Change log
 See link for complete log: [Log.csv](./log.csv)
 
-|Commit   |User |Date/Time            |Change                                                                                                                          |
+|Hash   |User |Date/Time            |Change                                                                                                                          |
 |-------|-----|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
 6daa95b|rutvik2611|Sun Nov 10 16:06:07 2019 -0500|Fix:Use split function for Varaince of sample proportion
 2ee55fb|rutvik2611|Sun Nov 10 16:04:37 2019 -0500|Fix:Use split function for sample mean and sample stdev
