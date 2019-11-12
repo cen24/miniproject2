@@ -206,6 +206,19 @@ try:
                 print("Cintreval has AsserstionError:", e)
                 assert 0
 
+        def test_sample(self):
+            test_data = csvreader('Tests/csvdata/Array3.csv').data
+            #test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+
+            listx = []
+            #since this not a sudo random number genrator we can predict the lenght!
+            for row in test_data:
+                result = float(row['Array'])
+                listx.append(result)
+                self.extendedstat.sample_(listx,50)
+            self.assertEqual(len(listx),309)
+
+
 except IndentationError as e :
     print("Indentation Error in Extended Stat:", e)
 except ImportError as e :

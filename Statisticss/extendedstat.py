@@ -10,6 +10,7 @@ try:
     from Statisticss.computation.extended.Variance_of_population_proportion import Variance_of_population_proportion
     from Statisticss.computation.extended.Variance_of_sample_proportion import Variance_of_sample_proportion
     from Statisticss.computation.extended.cinterval import cintreval
+    from Statisticss.computation.sample import Sample
 
 
     class extendedstat:
@@ -61,6 +62,11 @@ try:
         def cintreval_(self, list):
             self.result = cintreval(list)
             return self.result
+
+        def sample_(self,list ,num):
+            self.result = Sample(list,num)
+            return self.result
+
 
 except ImportError as e:
     print("Extended Stat has Import Error -->", e)
