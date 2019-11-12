@@ -1,12 +1,13 @@
 from Statisticss.computation.populationmean import mean
-from Statisticss.computation.extended.split_list  import split_list
+from Statisticss.computation.sample import Sample
 
 
 
 
 
 def samplemean(list):
-    r = split_list(list)
+    s=50
+    r = Sample(list,s)
     c = mean(r)
     return c
 
