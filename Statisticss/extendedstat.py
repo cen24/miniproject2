@@ -4,7 +4,7 @@ try:
     from Statisticss.computation.extended.samplemean import samplemean
     from Statisticss.computation.extended.samplestdev import samplestdev
     from Statisticss.computation.extended.samplevar import samplevar
-    from Statisticss.computation.extended.zscore import zscore
+    from Statisticss.computation.extended.zscore import zscore_
     from Statisticss.computation.extended.population_correlation_coefficient import population_correlation_coefficient
     from Statisticss.computation.extended.pvalue import pvalue
     from Statisticss.computation.extended.Variance_of_population_proportion import Variance_of_population_proportion
@@ -27,8 +27,8 @@ try:
             self.result = samplevar(list)
             return self.result
 
-        def zscore_(self, z, list):
-            self.result = zscore(z, list)
+        def _zscore_(self, list1):
+            self.result = zscore_(list1)
             return self.result
 
         def proportion_(self, list):

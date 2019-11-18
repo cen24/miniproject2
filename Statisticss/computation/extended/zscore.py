@@ -1,12 +1,14 @@
-from Statisticss.computation.populationmean import mean
 from Statisticss.computation.populationstdev import stdev
+from Statisticss.computation.populationmean import mean
 
-
-
-
-def zscore(z, list):
-    c = (z * stdev(list)) + mean(list)
-    return c
+def zscore_(lisst):
+    mresult = mean(lisst)
+    sresult = stdev(lisst)
+    zscore = list()
+    for x in lisst:
+        my_score = (x - mresult) / sresult
+        zscore.append(round(my_score, 2))
+    return zscore
 
 
 

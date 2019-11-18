@@ -2,6 +2,7 @@ from Calculator.computation.addition import add
 from Calculator.computation.division import div
 
 
+
 def mean(list):
     try:
         n = len(list)
@@ -13,3 +14,5 @@ def mean(list):
     except Exception as e:
         print("Exception in Mean",e)
         return 0
+
+

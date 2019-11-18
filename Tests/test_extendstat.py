@@ -10,25 +10,42 @@ try:
         def setUp(self) -> None:
             self.extendedstat = extendedstat()
 
+## Z- Score fix
+        def test_z_score(self):
+            test_data = csvreader('csvdata/zscorelist.csv').data
+            test_result = csvreader('csvdata/zscoreresult.csv').data
 
-        def test_zscore(self):
+            '''
+            for column in test_result:
+            result_test = float(column['Z_score'])
+            
+            list1 = list()
+            
+            for row in test_data:
+            result = float(row[0])
+            list1.append(result)
+            '''
+            self.assertEqual(self.extendedstat._zscore_(test_data), test_result)
 
-                test_data = csvreader('Tests/csvdata/Array3.csv').data
-                test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+### Z score fix
+        #def test_zscore(self):
 
-                for column in test_result:
-                    result_test = float(column['zscore'])
-                    z = float(column['zvalue4zscore'])
+         #       test_data = csvreader('Tests/csvdata/Array3.csv').data
+          #      test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
-                listx = []
+           #     for column in test_result:
+            #        result_test = float(column['zscore'])
+             #       z = float(column['zvalue4zscore'])
 
-
-                for row in test_data:
-                    result = float(row['Array'])
-                    listx.append(result)
+              #  listx = []
 
 
-                self.assertEqual(round(self.extendedstat.zscore_(z,listx)), round(result_test))
+               # for row in test_data:
+                #    result = float(row['Array'])
+                 #   listx.append(result)
+
+
+               # self.assertEqual(round(self.extendedstat.zscore_(z,listx)), round(result_test))
 
 
         def test_samplevar(self):
