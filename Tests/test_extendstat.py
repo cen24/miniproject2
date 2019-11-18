@@ -11,41 +11,25 @@ try:
             self.extendedstat = extendedstat()
 
 
+        def test_zscore(self):
 
-### Z score1
-        #def test_zscore(self):
+                test_data = csvreader('Tests/csvdata/Array3.csv').data
+                test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
 
-          #  test_data = csvreader('Tests/csvdata/Array3.csv').data
-            # test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+                for column in test_result:
+                    result_test = float(column['zscore'])
+                    z = float(column['zvalue4zscore'])
 
-           # for column in test_result:
-            #    result_test = float(column['zscore'])
-             #   z = float(column['zvalue4zscore'])
+                listx = []
 
-            #listx = []
 
-            #for row in test_data:
-             #   result = float(row['Array'])
-              #  listx.append(result)
+                for row in test_data:
+                    result = float(row['Array'])
+                    listx.append(result)
 
-           # self.assertEqual(round(self.extendedstat.zscore_(z, listx)), round(result_test))
 
- ## Z- Score 2
-        # def test_z_score(self):
-        #   test_data = csvreader('csvdata/zscorelist.csv').data
-        #  test_result = csvreader('csvdata/zscoreresult.csv').data
+                self.assertEqual(round(self.extendedstat.zscore_(z,listx)), round(result_test))
 
-        # '''
-        # for column in test_result:
-        # result_test = float(column['Z_score'])
-
-        # list1 = list()
-
-        # for row in test_data:
-        # result = float(row[0])
-        # list1.append(result)
-        # '''
-        # self.assertEqual(self.extendedstat._zscore_(test_data), test_result)
 
         def test_samplevar(self):
 
@@ -221,6 +205,19 @@ try:
             except AssertionError as e:
                 print("Cintreval has AsserstionError:", e)
                 assert 0
+
+        def test_sample(self):
+            test_data = csvreader('Tests/csvdata/Array3.csv').data
+            #test_result = csvreader('Tests/csvdata/Array3_result2.csv').data
+
+            listx = []
+            #since this not a sudo random number genrator we can predict the lenght!
+            for row in test_data:
+                result = float(row['Array'])
+                listx.append(result)
+                self.extendedstat.sample_(listx,50)
+            self.assertEqual(len(listx),309)
+
 
         def test_sample(self):
             test_data = csvreader('Tests/csvdata/Array3.csv').data

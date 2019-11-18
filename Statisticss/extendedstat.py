@@ -27,9 +27,9 @@ try:
             self.result = samplevar(list)
             return self.result
 
-        #def _zscore_(self, list1):
-         #   self.result = zscore(list1)
-          #  return self.result
+        def zscore_(self, z, list):
+            self.result = zscore(z, list)
+            return self.result
 
         def proportion_(self, list):
             self.result = proportion(list)
@@ -62,6 +62,11 @@ try:
         def cintreval_(self, list):
             self.result = cintreval(list)
             return self.result
+
+        def sample_(self,list ,num):
+            self.result = Sample(list,num)
+            return self.result
+
 
         def sample_(self,list ,num):
             self.result = Sample(list,num)
