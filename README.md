@@ -7,21 +7,59 @@ Created a python module to perform statistical calculations. For each calculatio
 See below for calculations that can be performed.
 
 ### **Program calculates the following:**
-- [X] Population Mean
-- [X] Median
-- [X] Mode
-- [X] Population Standard Deviation
-- [X] Variance of population proportion
-- [x] Z-Score/Standardized Score
-- [X] Population Correlation Coefficient
-- [X] Confidence Interval
-- [x] Population Variance
-- [x] Sample Variance
-- [x] P Value
-- [X] Proportion
-- [x] Sample Mean
-- [X] Sample Standard Deviation
-- [X] Variance of sample proportion
+
+**- [X] Population Mean - formula, = μ = ( Σ Xi ) / N.**
+The mean is the usual average, so I'll add and then divide:
+
+(13 + 18 + 13 + 14 + 13 + 16 + 14 + 21 + 13) ÷ 9 = 15
+
+Note that the mean, in this case, isn't a value from the original list. This is a common result. You should not assume that your mean will be one of your original numbers.
+
+**- [X] Median -** formula, Size of (n+12)th item
+
+The median is the middle value, so first I'll have to rewrite the list in numerical order:
+
+13, 13, 13, 13, 14, 14, 16, 18, 21
+
+There are nine numbers in the list, so the middle one will be the (9 + 1) ÷ 2 = 10 ÷ 2 = 5th number:
+
+13, 13, 13, 13, 14, 14, 16, 18, 21
+
+So the median is 14.
+
+**- [X] Mode  -** formula, The mode is that value in a series of observation which occurs with greatest frequency. 
+
+list - 13, 13, 13, 13, 14, 14, 16, 18, 21
+
+The mode is the number that is repeated more often than any other, so 13 is the mode from the list above
+
+The largest value in the list is 21, and the smallest is 13, so the range is 21 – 13 = 8.
+
+
+**- [X] Population Standard Deviation  -** formula,  σ = sqrt [ Σ ( Xi - μ )2 / N ]
+
+**- [X] Variance of population proportion  -** formula, σP2 = PQ / n.
+
+**- [x] Z-Score/Standardized Score  -** formula, Z = (X - μ) / σ
+
+**- [X] Population Correlation Coefficient -** Correlation coefficients are used in statistics to measure how strong a relationship is between two variables. There are several types of correlation coefficient: Pearson’s correlation (also called Pearson’s R) is a correlation coefficient commonly used in linear regression.
+
+**- [X] Confidence Interval  -** Statisticians use a confidence interval to express the degree of uncertainty associated with a sample statistic. A confidence interval is an interval estimate combined with a probability statement.
+
+For example, suppose a statistician conducted a survey and computed an interval estimate, based on survey data. The statistician might use a confidence level to describe uncertainty associated with the interval estimate. He/she might describe the interval estimate as a "95% confidence interval". This means that if we used the same sampling method to select different samples and computed an interval estimate for each sample, we would expect the true population parameter to fall within the interval estimates 95% of the time.
+
+**- [x] Population Variance  -** formula, σ2 = Σ ( Xi - μ )2 / N.
+**- [x] Sample Variance  -** formula, s2 = Σ ( xi - x )2 / ( n - 1 )
+**- [x] P Value  -** formula, p-value = P(TS ts. H 0 is true) = cdf(ts)
+The p-value is calculated using the sampling distribution of the test statistic under the null hypothesis, the sample data, and the type of test being done (lower-tailed test, upper-tailed test, or two-sided test). The p-value for: a lower-tailed test is specified by the formula above.
+**- [X] Proportion  -** A proportion is simply a statement that two ratios are equal. It can be written in two ways: as two 
+equal fractions a/b = c/d; or using a colon, a:b = c:d.
+
+**- [x] Sample Mean  -** formula, x = ( Σ xi ) / n
+
+**- [X] Sample Standard Deviation  -** formula, s = sqrt [ Σ ( xi - x )2 / ( n - 1 ) ]
+
+**- [X] Variance of sample proportion  -** formula, sp2 = pq / (n - 1)
 
 **For definitions of some of the programming terms used please see link below for their definitions  :** [Additional terms(miniproject2)](https://github.com/rutvik2611/miniproject1/blob/master/Additional%20terms(miniproject2).md)
 
