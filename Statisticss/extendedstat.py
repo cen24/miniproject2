@@ -68,11 +68,6 @@ try:
             return self.result
 
 
-        def sample_(self,list ,num):
-            self.result = Sample(list,num)
-            return self.result
-
-
 except ImportError as e:
     print("Extended Stat has Import Error -->", e)
 except TypeError as e:
